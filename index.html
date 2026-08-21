@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nigel's Football Predictions &middot; 2026/27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pitch:#0C1310; --panel:#131D18; --panel2:#18241E; --line:#26362E; --line2:#33473C;
+  --chalk:#EDF3EF; --mute:#8CA396; --dim:#5F7469;
+  --amber:#FFB627; --good:#57D28F; --mid:#E8C25A; --bad:#F2613F;
+  --pad:clamp(14px,4vw,32px);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--pitch);
+  background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.012) 0 68px,transparent 68px 136px);
+  color:var(--chalk);
+  font-family:"Archivo",system-ui,sans-serif;
+  font-variation-settings:"wdth" 100;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px;margin:0 auto;padding:0 var(--pad) 72px}
+
+/* ---------- header ---------- */
+header{padding:clamp(28px,7vw,56px) 0 22px}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--amber);margin:0 0 14px
+}
+h1{
+  margin:0;font-size:clamp(32px,9vw,72px);line-height:.9;font-weight:800;
+  font-variation-settings:"wdth" 78;text-transform:uppercase;letter-spacing:-.01em;
+}
+h1 em{font-style:normal;color:var(--dim)}
+.tagline{margin:16px 0 0;max-width:46ch;color:var(--mute);font-size:15px;line-height:1.5}
+
+.status{
+  display:flex;flex-wrap:wrap;gap:10px 26px;align-items:baseline;
+  margin-top:26px;padding-top:16px;border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.06em;color:var(--dim)
+}
+.status b{color:var(--chalk);font-weight:500}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--good);display:inline-block;margin-right:7px;vertical-align:1px}
+.dot.stale{background:var(--amber)}
+.dot.sample{background:var(--bad)}
+
+.controls{display:flex;gap:8px;margin:22px 0 10px;flex-wrap:wrap}
+button.ctl{
+  background:transparent;border:1px solid var(--line2);color:var(--mute);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  padding:8px 13px;border-radius:2px;cursor:pointer;transition:.15s
+}
+button.ctl:hover{border-color:var(--amber);color:var(--amber)}
+button.ctl[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#10180F}
+button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+/* ---------- table ---------- */
+.head,.row{
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr) 132px 52px;
+  gap:12px;align-items:center
+}
+.head{
+  padding:0 12px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--dim);
+  position:sticky;top:0;background:var(--pitch);z-index:2;padding-top:10px;
+  border-bottom:1px solid var(--line)
+}
+.head .r,.row .r{text-align:right}
+
+.entry{border-bottom:1px solid var(--line)}
+.row{
+  width:100%;background:none;border:0;color:inherit;font:inherit;text-align:left;
+  padding:13px 12px;cursor:pointer;transition:background .15s
+}
+.row:hover{background:var(--panel)}
+.row:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+.entry.open .row{background:var(--panel)}
+
+.pos{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--mute);font-weight:500}
+.entry.lead .pos{color:var(--amber)}
+.tie{color:var(--dim);font-size:11px}
+.name{
+  font-size:clamp(15px,4vw,18px);font-weight:600;font-variation-settings:"wdth" 92;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+}
+.entry.me .name{color:var(--amber)}
+.entry.me .name::after{content:"YOU";font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.14em;
+  border:1px solid var(--amber);border-radius:2px;padding:1px 4px;margin-left:9px;vertical-align:2px}
+.total{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:600;text-align:right}
+
+/* the gap strip: eight bars, one per league */
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;align-items:end;height:30px}
+.bar{border-radius:1px 1px 0 0;min-height:3px;position:relative}
+.bar.miss{background:repeating-linear-gradient(45deg,var(--line2) 0 2px,transparent 2px 4px);height:100%!important}
+
+/* ---------- expanded ---------- */
+.detail{display:none;padding:4px 12px 22px}
+.entry.open .detail{display:block}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.pick{background:var(--panel2);padding:10px 12px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pick .lg{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:3px}
+.pick .tm{font-size:14px;font-weight:500;font-variation-settings:"wdth" 88}
+.pick .pt{font-family:"IBM Plex Mono",monospace;font-size:17px;font-weight:600;white-space:nowrap}
+.warn{margin:12px 0 0;font-size:12.5px;color:var(--bad);font-family:"IBM Plex Mono",monospace}
+
+/* ---------- footer ---------- */
+.rules{margin-top:52px;border-top:1px solid var(--line);padding-top:22px;color:var(--mute);font-size:13.5px;line-height:1.6}
+.rules h2{font-size:12px;font-family:"IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:0 0 12px;font-weight:500}
+.rules p{margin:0 0 10px;max-width:64ch}
+.srchead{font-size:12px;font-family:"IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:26px 0 12px;font-weight:500}
+.srclead{margin:0 0 12px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--mute)}
+.srclead b{color:var(--good);font-weight:500}
+.srclead b.warm{color:var(--amber)} .srclead b.cold{color:var(--bad)}
+.srcgrid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.srcrow{display:grid;grid-template-columns:minmax(0,1.15fr) 58px 104px minmax(0,1.25fr);gap:10px;
+  background:var(--panel2);padding:8px 12px;align-items:baseline;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+.srcrow.hdr{background:var(--panel);color:var(--dim);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase}
+.srcrow.hdr span{color:var(--dim)!important}
+.srcrow .played{color:var(--mute);white-space:nowrap}
+.srcrow .lgname{color:var(--chalk);font-family:"Archivo",sans-serif;font-size:13px;font-weight:500;
+  font-variation-settings:"wdth" 88;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srcrow .via{color:var(--dim);letter-spacing:.04em;white-space:nowrap}
+.srcrow .fresh{color:var(--mute);text-align:right}
+.fresh.warm{color:var(--amber)} .fresh.cold{color:var(--bad)}
+.fresh.lag{color:var(--amber)}
+@media(max-width:620px){
+  .srcrow{grid-template-columns:minmax(0,1fr) 46px 76px minmax(0,1fr);font-size:9.5px;gap:6px;padding:8px 9px}
+  .srcrow .lgname{font-size:12px}
+}
+.key{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim)}
+.key span{display:flex;align-items:center;gap:7px}
+.sw{width:11px;height:11px;border-radius:1px}
+
+@media(max-width:620px){
+  .head,.row{grid-template-columns:30px minmax(0,1fr) 92px 44px;gap:9px}
+  .strip{height:26px;gap:2px}
+  .total{font-size:17px}
+  .head .lbl-strip{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Season 2026/27 &middot; 39 entries</p>
+  <h1>Nigel&rsquo;s<br>Football<br><em>Predictions</em></h1>
+  <p class="tagline">One pick to win each of eight leagues. Your score is where those eight teams sit right now &mdash; add them up, lowest total leads. Perfect is 8.</p>
+  <div class="status" id="status"></div>
+</header>
+
+<div class="controls">
+  <button class="ctl" id="expandAll" aria-pressed="false">Show every pick</button>
+  <button class="ctl" id="highlightMe" aria-pressed="false">Find me</button>
+</div>
+
+<div class="head">
+  <div>#</div><div>Player</div><div class="lbl-strip">Gap by league</div><div class="r">Pts</div>
+</div>
+<div id="board"></div>
+
+<div class="rules">
+  <h2>How the score works</h2>
+  <p>Each entry picked one team to win each of the eight leagues before a ball was kicked, and those picks are locked for the season. Every week the table below takes each team's live league position and adds the eight numbers together. Pick the champion of every league and you finish on 8.</p>
+  <p id="prov"></p>
+  <h2 class="srchead">Where each table came from</h2>
+  <p class="srclead" id="srclead"></p>
+  <div class="srcgrid" id="sources"></div>
+
+  <div class="key">
+    <span><i class="sw" style="background:var(--good)"></i> top of the league</span>
+    <span><i class="sw" style="background:var(--mid)"></i> mid-table</span>
+    <span><i class="sw" style="background:var(--bad)"></i> way off</span>
+    <span><i class="sw" style="background:repeating-linear-gradient(45deg,var(--line2) 0 2px,transparent 2px 4px)"></i> team not found in the table</span>
+  </div>
+</div>
+
+</div>
+
+<script>
+// ---------------------------------------------------------------------------
+// Where to read the live standings from.
+//
+// Pointing this at GitHub means the data updates WITHOUT redeploying the site,
+// which matters because Netlify's free plan charges credits per deploy.
+// Replace USER and REPO with your GitHub username and repository name, and
+// "main" with your branch if it isn't main. The repository must be public.
+//
+// Leave it as null to just read ./standings.json sitting next to this page.
+const DATA_URL = null;   // page and data live together now, so just read ./standings.json
+// ---------------------------------------------------------------------------
+
+const CONFIG = {"competition":"Football Competition 2026/27","season":2026,"leagues":[{"key":"eng_premier","name":"Premier League","country":"England","espn":"eng.1","div":"E0"},{"key":"eng_championship","name":"Championship","country":"England","espn":"eng.2","div":"E1"},{"key":"eng_league_one","name":"League One","country":"England","espn":"eng.3","div":"E2"},{"key":"eng_league_two","name":"League Two","country":"England","espn":"eng.4","div":"E3"},{"key":"eng_national","name":"National League","country":"England","espn":"eng.5","div":"EC"},{"key":"sco_championship","name":"Championship","country":"Scotland","espn":"sco.2","div":"SC1"},{"key":"sco_league_one","name":"League One","country":"Scotland","espn":"sco.3","div":"SC2"},{"key":"sco_league_two","name":"League Two","country":"Scotland","espn":"sco.4","div":"SC3"}],"aliases":{"ARSENAL":"Arsenal","CHELSEA":"Chelsea","LIVERPOOL":"Liverpool","MAN UTD":"Manchester United","MAN CITY":"Manchester City","SPURS":["Tottenham Hotspur","Tottenham"],"WEST HAM":"West Ham United","WOLVES":["Wolverhampton Wanderers","Wolves"],"WEST BROM":["West Bromwich Albion","West Brom"],"MIDDLESBOROUGH":"Middlesbrough","BIRMINGHAM":"Birmingham City","WREXHAM":"Wrexham","SOUTHAMPTON":"Southampton","SHEFFIELD UNITED":"Sheffield United","SHEFFIELD WEDNESDAY":["Sheffield Wednesday","Sheffield Weds"],"LUTON":"Luton Town","LEICESTER":"Leicester City","BRADFORD":"Bradford City","BLACKPOOL":"Blackpool","STOCKPORT":"Stockport County","BRISTOL ROVERS":["Bristol Rovers","Bristol Rvs"],"SALFORD":"Salford City","PORT VALE":"Port Vale","BARNET":"Barnet","SWINDON TOWN":["Swindon Town","Swindon"],"CHESTERFIELD":"Chesterfield","GRIMSBY":"Grimsby Town","FLEETWOOD":"Fleetwood Town","CARLISLE":"Carlisle United","HARTLEPOOL":"Hartlepool United","HARROGATE":"Harrogate Town","FOREST GREEN":"Forest Green Rovers","SOUTHEND":"Southend United","SUTTON":"Sutton United","BOREHAMWOOD":["Boreham Wood","Borehamwood"],"LIVINGSTONE":"Livingston","PARTICK THISTLE":["Partick Thistle","Partick"],"RAITH ROVERS":"Raith Rovers","ST JOHNSTON":["St Johnstone","St. Johnstone"],"AYR UNITED":["Ayr United","Ayr"],"DUNFERMILINE":["Dunfermline Athletic","Dunfermline"],"ROSS COUNTY":"Ross County","INVERNESS":["Inverness Caledonian Thistle","Inverness CT","Inverness C","Inverness"],"HAMILTON":["Hamilton Academical","Hamilton"],"AIRDRIE":["Airdrieonians","Airdrie Utd","Airdrie United","Airdrie"],"EAST KILBRIDE":"East Kilbride","SPARTANS":["Spartans","The Spartans","Spartans FC"],"CLYDE":"Clyde","STIRLING ALBION":["Stirling Albion","Stirling"],"ELGIN CITY":["Elgin City","Elgin"],"KELTY HEARTS":"Kelty Hearts","STRANRAER":"Stranraer"},"players":[{"name":"JASON COLE","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WOLVES","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"BOB DICKINSON","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"DEAN SHERIDAN","paid":"NO","picks":{"eng_premier":"MAN CITY","eng_championship":"WOLVES","eng_league_one":"LEICESTER","eng_league_two":"BRISTOL ROVERS","eng_national":"CARLISLE","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"LIAM FOLEY","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"ROBB FORTY","paid":"NO","picks":{"eng_premier":"MAN UTD","eng_championship":"WEST HAM","eng_league_one":"LUTON","eng_league_two":"BRISTOL ROVERS","eng_national":"HARTLEPOOL","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"KELTY HEARTS"}},{"name":"MAURICE PEARCE","paid":"YES","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"BRADFORD","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"LIVINGSTONE","sco_league_one":"HAMILTON","sco_league_two":"SPARTANS"}},{"name":"DAN THOMAS","paid":"NO","picks":{"eng_premier":"CHELSEA","eng_championship":"WEST HAM","eng_league_one":"LUTON","eng_league_two":"SALFORD","eng_national":"HARTLEPOOL","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"SIMON HALL","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"HARTLEPOOL","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"PAUL McGURK","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"SHEFFIELD WEDNESDAY","eng_league_two":"BRISTOL ROVERS","eng_national":"HARTLEPOOL","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"KELTY HEARTS"}},{"name":"DAVE LODER","paid":"YES","picks":{"eng_premier":"ARSENAL","eng_championship":"WOLVES","eng_league_one":"LUTON","eng_league_two":"BRISTOL ROVERS","eng_national":"SOUTHEND","sco_championship":"PARTICK THISTLE","sco_league_one":"HAMILTON","sco_league_two":"CLYDE"}},{"name":"KIM KNIGHT","paid":"YES","picks":{"eng_premier":"MAN CITY","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"PHIL PHILLIPS","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"LIVINGSTONE","sco_league_one":"EAST KILBRIDE","sco_league_two":"CLYDE"}},{"name":"TONY SMITH","paid":"YES","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"BRISTOL ROVERS","eng_national":"SOUTHEND","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"TERRY SMITH","paid":"YES","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SWINDON TOWN","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"MARTIN LANE","paid":"YES","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"SHEFFIELD WEDNESDAY","eng_league_two":"BRISTOL ROVERS","eng_national":"HARROGATE","sco_championship":"LIVINGSTONE","sco_league_one":"AIRDRIE","sco_league_two":"STIRLING ALBION"}},{"name":"ADAM WATTS","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"FOREST GREEN","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"BARNEY LANE","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SWINDON TOWN","eng_national":"CARLISLE","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"KEVEN KNIGHT","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"LIVINGSTONE","sco_league_one":"AIRDRIE","sco_league_two":"STIRLING ALBION"}},{"name":"STEPHEN GODDARD","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LUTON","eng_league_two":"BARNET","eng_national":"FOREST GREEN","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"CHRIS CROOK","paid":"NO","picks":{"eng_premier":"MAN CITY","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"HAMILTON","sco_league_two":"SPARTANS"}},{"name":"KEN WILSON","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"SOUTHEND","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"RUSS NORTON","paid":"NO","picks":{"eng_premier":"MAN UTD","eng_championship":"WREXHAM","eng_league_one":"LEICESTER","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"MARK CUSACK","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LUTON","eng_league_two":"CHESTERFIELD","eng_national":"FOREST GREEN","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"BILLY WATTS","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"PORT VALE","eng_national":"HARROGATE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"ELGIN CITY"}},{"name":"CONNOR SALT","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WOLVES","eng_league_one":"BRADFORD","eng_league_two":"PORT VALE","eng_national":"FOREST GREEN","sco_championship":"AYR UNITED","sco_league_one":"ROSS COUNTY","sco_league_two":"SPARTANS"}},{"name":"NEIL STEPHENS","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"MIDDLESBOROUGH","eng_league_one":"LEICESTER","eng_league_two":"BRISTOL ROVERS","eng_national":"SOUTHEND","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"GARY GOODWIN","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"SHEFFIELD WEDNESDAY","eng_league_two":"CHESTERFIELD","eng_national":"HARROGATE","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"ELGIN CITY"}},{"name":"NEIL OSMOND","paid":"YES","picks":{"eng_premier":"SPURS","eng_championship":"WEST HAM","eng_league_one":"LUTON","eng_league_two":"BARNET","eng_national":"CARLISLE","sco_championship":"PARTICK THISTLE","sco_league_one":"EAST KILBRIDE","sco_league_two":"CLYDE"}},{"name":"DAVID WILLIAMS","paid":"NO","picks":{"eng_premier":"MAN CITY","eng_championship":"SHEFFIELD UNITED","eng_league_one":"LEICESTER","eng_league_two":"BRISTOL ROVERS","eng_national":"HARTLEPOOL","sco_championship":"DUNFERMILINE","sco_league_one":"ROSS COUNTY","sco_league_two":"CLYDE"}},{"name":"DAVE BENSON","paid":"YES","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"SHEFFIELD WEDNESDAY","eng_league_two":"BRISTOL ROVERS","eng_national":"BOREHAMWOOD","sco_championship":"PARTICK THISTLE","sco_league_one":"EAST KILBRIDE","sco_league_two":"CLYDE"}},{"name":"STUART CRAWFORD","paid":"NO","picks":{"eng_premier":"MAN UTD","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SWINDON TOWN","eng_national":"FOREST GREEN","sco_championship":"RAITH ROVERS","sco_league_one":"ROSS COUNTY","sco_league_two":"STIRLING ALBION"}},{"name":"NIGEL FREETH","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"MIDDLESBOROUGH","eng_league_one":"STOCKPORT","eng_league_two":"BARNET","eng_national":"SOUTHEND","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"SPARTANS"}},{"name":"TOM BAMBRICK","paid":"NO","picks":{"eng_premier":"MAN CITY","eng_championship":"WEST HAM","eng_league_one":"LEICESTER","eng_league_two":"SWINDON TOWN","eng_national":"HARTLEPOOL","sco_championship":"LIVINGSTONE","sco_league_one":"HAMILTON","sco_league_two":"KELTY HEARTS"}},{"name":"RIVER SHERIDAN","paid":"NO","picks":{"eng_premier":"MAN CITY","eng_championship":"WEST HAM","eng_league_one":"SHEFFIELD WEDNESDAY","eng_league_two":"GRIMSBY","eng_national":"CARLISLE","sco_championship":"DUNFERMILINE","sco_league_one":"HAMILTON","sco_league_two":"CLYDE"}},{"name":"JENNY SMITH","paid":"YES","picks":{"eng_premier":"MAN CITY","eng_championship":"BIRMINGHAM","eng_league_one":"SHEFFIELD WEDNESDAY","eng_league_two":"BARNET","eng_national":"SOUTHEND","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"STRANRAER"}},{"name":"COLIN COOPER","paid":"NO","picks":{"eng_premier":"MAN UTD","eng_championship":"SOUTHAMPTON","eng_league_one":"LEICESTER","eng_league_two":"CHESTERFIELD","eng_national":"FOREST GREEN","sco_championship":"LIVINGSTONE","sco_league_one":"ROSS COUNTY","sco_league_two":"KELTY HEARTS"}},{"name":"DAVE BENTLEY","paid":"NO","picks":{"eng_premier":"ARSENAL","eng_championship":"WEST HAM","eng_league_one":"BLACKPOOL","eng_league_two":"BARNET","eng_national":"SUTTON","sco_championship":"AYR UNITED","sco_league_one":"EAST KILBRIDE","sco_league_two":"CLYDE"}},{"name":"CRAIG SMITH","paid":"YES","picks":{"eng_premier":"MAN UTD","eng_championship":"MIDDLESBOROUGH","eng_league_one":"BLACKPOOL","eng_league_two":"SALFORD","eng_national":"CARLISLE","sco_championship":"DUNFERMILINE","sco_league_one":"AIRDRIE","sco_league_two":"STRANRAER"}},{"name":"CHRIS BARNES","paid":"NO","picks":{"eng_premier":"MAN CITY","eng_championship":"WEST BROM","eng_league_one":"LEICESTER","eng_league_two":"FLEETWOOD","eng_national":"SOUTHEND","sco_championship":"PARTICK THISTLE","sco_league_one":"ROSS COUNTY","sco_league_two":"KELTY HEARTS"}}],"you":"BOB DICKINSON","deductions":{}};
+const SAMPLE = {"updated":"2026-08-20T09:00:00Z","source":"sample","leagues":{"eng_premier":{"name":"England Premier League","teams":[{"rank":1,"name":"Arsenal"},{"rank":2,"name":"Manchester United"},{"rank":3,"name":"Chelsea"},{"rank":4,"name":"Manchester City"},{"rank":5,"name":"Tottenham Hotspur"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"eng_championship":{"name":"England Championship","teams":[{"rank":1,"name":"Wolverhampton Wanderers"},{"rank":2,"name":"West Ham United"},{"rank":3,"name":"Sheffield United"},{"rank":4,"name":"Birmingham City"},{"rank":5,"name":"Wrexham"},{"rank":6,"name":"Middlesbrough"},{"rank":7,"name":"Southampton"},{"rank":8,"name":"West Bromwich Albion"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"eng_league_one":{"name":"England League One","teams":[{"rank":1,"name":"Luton Town"},{"rank":2,"name":"Sheffield Wednesday"},{"rank":3,"name":"Leicester City"},{"rank":4,"name":"Bradford City"},{"rank":5,"name":"Blackpool"},{"rank":6,"name":"Stockport County"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"eng_league_two":{"name":"England League Two","teams":[{"rank":1,"name":"Bristol Rovers"},{"rank":2,"name":"Salford City"},{"rank":3,"name":"Port Vale"},{"rank":4,"name":"Barnet"},{"rank":5,"name":"Swindon Town"},{"rank":6,"name":"Chesterfield"},{"rank":7,"name":"Grimsby Town"},{"rank":8,"name":"Fleetwood Town"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"eng_national":{"name":"England National League","teams":[{"rank":1,"name":"Carlisle United"},{"rank":2,"name":"Hartlepool United"},{"rank":3,"name":"Harrogate Town"},{"rank":4,"name":"Forest Green Rovers"},{"rank":5,"name":"Southend United"},{"rank":6,"name":"Sutton United"},{"rank":7,"name":"Boreham Wood"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"sco_championship":{"name":"Scotland Championship","teams":[{"rank":1,"name":"Livingston"},{"rank":2,"name":"Partick Thistle"},{"rank":3,"name":"Raith Rovers"},{"rank":4,"name":"St Johnstone"},{"rank":5,"name":"Ayr United"},{"rank":6,"name":"Dunfermline Athletic"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"sco_league_one":{"name":"Scotland League One","teams":[{"rank":1,"name":"Ross County"},{"rank":2,"name":"Inverness Caledonian Thistle"},{"rank":3,"name":"Hamilton Academical"},{"rank":4,"name":"Airdrieonians"},{"rank":5,"name":"East Kilbride"}],"source":"sample","checked":"2026-08-20T09:00:00Z"},"sco_league_two":{"name":"Scotland League Two","teams":[{"rank":1,"name":"Spartans"},{"rank":2,"name":"Clyde"},{"rank":3,"name":"Stirling Albion"},{"rank":4,"name":"Elgin City"},{"rank":5,"name":"Kelty Hearts"},{"rank":6,"name":"Stranraer"}],"source":"sample","checked":"2026-08-20T09:00:00Z"}}};
+
+/* ---------- matching sheet names to whatever the data feed calls a club ---------- */
+const norm = s => s.toUpperCase()
+  .replace(/[^A-Z0-9 ]/g, ' ')
+  .replace(/\bUTD\b/g, 'UNITED')
+  .replace(/\b(FC|AFC|THE)\b/g, ' ')
+  .replace(/\s+/g, ' ').trim();
+
+// a pick's alias can be one name or several, because the two data sources
+// spell some clubs differently ("The Spartans" / "Spartans FC" / "Spartans")
+const variants = picked => [].concat(CONFIG.aliases[picked] ?? picked).map(norm);
+
+function findTeam(table, pickedName){
+  const want = variants(pickedName).concat(norm(pickedName));
+  for (const t of table){ if (want.includes(norm(t.name))) return t; }
+  // one name contained in the other ("Luton" vs "Luton Town")
+  for (const t of table){
+    const n = norm(t.name);
+    if (want.some(w => n.startsWith(w) || w.startsWith(n))) return t;
+  }
+  return null;
+}
+
+/* ---------- scoring ---------- */
+function score(standings){
+  const rows = CONFIG.players.map(p => {
+    const picks = CONFIG.leagues.map(lg => {
+      const table = (standings.leagues[lg.key] || {}).teams || [];
+      const team = findTeam(table, p.picks[lg.key]);
+      return { league: lg, picked: p.picks[lg.key], pos: team ? team.rank : null, size: table.length || 24 };
+    });
+    const missing = picks.filter(x => x.pos === null).length;
+    const total = picks.reduce((a,x) => a + (x.pos || 0), 0);
+    return { name: p.name, picks, total, missing };
+  });
+  // sort on total, then alphabetically so the order is stable week to week
+  rows.sort((a,b) => a.total - b.total || a.name.localeCompare(b.name));
+  let rank = 0, seen = 0, last = null;
+  rows.forEach(r => { seen++; if (r.total !== last){ rank = seen; last = r.total; r.shared = false; } else r.shared = true; r.rank = rank; });
+  rows.forEach(r => { r.tied = rows.filter(o => o.total === r.total).length > 1; });
+  return rows;
+}
+
+/* green at the top of a league, red at the bottom of it */
+function shade(pos, size){
+  const t = Math.min(1, (pos - 1) / Math.max(6, size - 1));
+  const hue = 148 - 138 * Math.pow(t, .7);
+  return `hsl(${hue} 62% ${58 - 6*t}%)`;
+}
+
+function ago(iso){
+  if (!iso) return null;
+  const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (mins < 2) return 'just now';
+  if (mins < 60) return `${mins} min ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs < 36) return `${hrs} hr ago`;
+  return `${Math.round(hrs / 24)} days ago`;
+}
+
+const day = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+
+function renderSources(standings){
+  // One clock for the whole thing: every league is fetched in the same run,
+  // so "when did we last look" belongs above the table, said once.
+  const checked = Object.values(standings.leagues).map(l => l.checked).filter(Boolean).sort().pop()
+                  || standings.updated;
+  const hrs = (Date.now() - new Date(checked)) / 36e5;
+  const heat = hrs < 6 ? '' : hrs < 36 ? 'warm' : 'cold';
+  document.getElementById('srclead').innerHTML =
+    `Last looked for changes <b class="${heat}">${ago(checked) ?? 'at an unknown time'}</b>.`;
+
+  const box = document.getElementById('sources');
+  const head = `<div class="srcrow hdr"><span>League</span><span>Source</span>
+    <span>Last played</span><span class="fresh">Status</span></div>`;
+
+  box.innerHTML = head + CONFIG.leagues.map(lg => {
+    const L = standings.leagues[lg.key];
+    if (!L) return `<div class="srcrow"><span class="lgname">${lg.country} ${lg.name}</span>
+      <span class="via">&mdash;</span><span class="played">&mdash;</span>
+      <span class="fresh cold">no table</span></div>`;
+
+    const via = L.source === 'espn' ? 'ESPN' : L.source === 'sample' ? 'sample' : 'results';
+
+    // Last played: the newest fixture the division has actually completed,
+    // checked against ESPN's scoreboard regardless of which source built the table.
+    const played = L.lastFixture ? day(L.lastFixture) : '\u2014';
+
+    // Status: ESPN publishes the finished table and gives us no date to test,
+    // so we take it on trust. The results feed dates every match, so we can
+    // compare what's in the table against what's been played.
+    let status, cls = '';
+    if (L.source === 'espn') {
+      status = 'Complete';
+    } else if (L.latestMatch && L.lastFixture && L.lastFixture > L.latestMatch) {
+      status = `Missing ${day(L.lastFixture)}`; cls = 'lag';
+    } else if (L.latestMatch) {
+      status = `Complete &ndash; including ${day(L.latestMatch)}`;
+    } else {
+      status = 'Unknown'; cls = 'warm';
+    }
+
+    const tip = [
+      L.latestMatch ? `newest result in this table: ${L.latestMatch}` : null,
+      L.lastFixture ? `newest result the division has played: ${L.lastFixture}` : null,
+      L.lastModified ? `source file updated ${L.lastModified}` : null,
+      L.checked ? `checked ${new Date(L.checked).toLocaleString('en-GB')}` : null
+    ].filter(Boolean).join(' \u00b7 ');
+
+    return `<div class="srcrow">
+      <span class="lgname">${lg.country} ${lg.name}</span>
+      <span class="via">${via}</span>
+      <span class="played">${played}</span>
+      <span class="fresh ${cls}" title="${tip}">${status}</span>
+    </div>`;
+  }).join('');
+}
+
+function render(standings){
+  const rows = score(standings);
+  const board = document.getElementById('board');
+  board.innerHTML = '';
+  rows.forEach(r => {
+    const worst = Math.max(...r.picks.map(p => p.pos || 12), 8);
+    const bars = r.picks.map(p => p.pos === null
+      ? `<i class="bar miss" title="${p.picked} — not found"></i>`
+      : `<i class="bar" style="height:${Math.max(10, 100 * p.pos / worst)}%;background:${shade(p.pos, p.size)}" title="${p.picked} — ${p.pos}"></i>`
+    ).join('');
+    const cells = r.picks.map(p => `<div class="pick">
+        <div><span class="lg">${p.league.country} ${p.league.name}</span><span class="tm">${p.picked}</span></div>
+        <span class="pt" style="color:${p.pos ? shade(p.pos, p.size) : 'var(--dim)'}">${p.pos ?? '—'}</span>
+      </div>`).join('');
+
+    const el = document.createElement('div');
+    el.className = 'entry' + (r.rank === 1 ? ' lead' : '');
+    el.dataset.name = r.name;
+    el.innerHTML = `
+      <button class="row" aria-expanded="false">
+        <span class="pos">${r.tied ? '<span class="tie">=</span>' : ''}${r.rank}</span>
+        <span class="name">${r.name}</span>
+        <span class="strip">${bars}</span>
+        <span class="total r">${r.total}</span>
+      </button>
+      <div class="detail">
+        <div class="picks">${cells}</div>
+        ${r.missing ? `<p class="warn">${r.missing} pick${r.missing>1?'s':''} couldn't be matched to a league table — add the club to the alias list.</p>` : ''}
+      </div>`;
+    const btn = el.querySelector('.row');
+    btn.addEventListener('click', () => {
+      const open = el.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    board.appendChild(el);
+  });
+
+  const when = new Date(standings.updated);
+  const hrs = (Date.now() - when) / 36e5;
+  const live = standings.source !== 'sample';
+  const cls = !live ? 'sample' : hrs > 30 ? 'stale' : '';
+  document.getElementById('status').innerHTML =
+    `<span><i class="dot ${cls}"></i>${live ? 'Live tables' : 'Sample data'}</span>` +
+    `<span>Updated <b>${when.toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</b></span>` +
+    `<span>Leader <b>${rows[0].name}</b> on <b>${rows[0].total}</b></span>`;
+  renderSources(standings);
+  document.getElementById('prov').textContent = live
+    ? 'Positions come straight from the live league tables and refresh a few times a day.'
+    : 'These positions are the placeholder numbers from the spreadsheet, not live tables — swap in a real standings.json to go live.';
+}
+
+/* ---------- controls ---------- */
+document.getElementById('expandAll').addEventListener('click', e => {
+  const on = e.target.getAttribute('aria-pressed') !== 'true';
+  e.target.setAttribute('aria-pressed', on);
+  e.target.textContent = on ? 'Collapse picks' : 'Show every pick';
+  document.querySelectorAll('.entry').forEach(n => {
+    n.classList.toggle('open', on);
+    n.querySelector('.row').setAttribute('aria-expanded', on);
+  });
+});
+document.getElementById('highlightMe').addEventListener('click', e => {
+  const on = e.target.getAttribute('aria-pressed') !== 'true';
+  e.target.setAttribute('aria-pressed', on);
+  document.querySelectorAll('.entry').forEach(n => n.classList.toggle('me', on && n.dataset.name === CONFIG.you));
+  if (on) document.querySelector('.entry.me')?.scrollIntoView({block:'center', behavior:'smooth'});
+});
+
+/* live file if it's there, spreadsheet numbers if it isn't */
+async function load(file){
+  const r = await fetch(file, {cache:'no-store'});
+  if (!r.ok) throw new Error(file);
+  return r.json();
+}
+(async () => {
+  // players.json is the master copy of the picks and the club-name aliases;
+  // the versions baked into this file are only a fallback for opening it offline.
+  try { Object.assign(CONFIG, await load('./players.json')); } catch {}
+  const sources = [DATA_URL, './standings.json']
+    .filter(u => u && !u.includes('/USER/REPO/'));   // ignore the unedited placeholder
+
+  for (const url of sources) {
+    try { return render(await load(url)); } catch {}
+  }
+  render(SAMPLE);
+})();
+</script>
+</body>
+</html>
