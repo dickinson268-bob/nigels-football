@@ -103,8 +103,23 @@ function parseCsv(text) {
 
 async function fromResults(league) {
   const url = `https://www.football-data.co.uk/mmz4281/${SEASON_CODE}/${league.div}.csv`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+  // GitHub's runners share IP addresses, and this site rate-limits them, so a
+  // single 429 shouldn't cost us a whole week's results. Three tries, backing
+  // off, with a browser-shaped User-Agent because the default one gets refused.
+  let res;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    res = await fetch(url, {
+      headers: {
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+                    + '(KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+        accept: 'text/csv,*/*'
+      }
+    });
+    if (res.ok) break;
+    if (attempt < 3) await new Promise(r => setTimeout(r, attempt * 4000));
+  }
+  if (!res.ok) throw new Error(`HTTP ${res.status} after 3 tries`);
   const lastModified = res.headers.get('last-modified') || null;
 
   let latestMatch = null;
