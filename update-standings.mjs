@@ -151,15 +151,104 @@ async function fromResults(league) {
   if (!teams.size) throw new Error('no matches played yet');
 
   // points, then goal difference, then goals scored, then alphabetically
-  const table = [...teams.values()]
-    .map(t => ({ ...t, gd: t.gf - t.ga }))
-    .sort((x, y) => y.points - x.points || y.gd - x.gd || y.gf - x.gf || x.name.localeCompare(y.name))
-    .map((t, i) => ({ rank: i + 1, name: t.name, played: t.played, points: t.points }));
-
-  return { teams: table, lastModified, latestMatch };
+  return { teams: rank([...teams.values()]), lastModified, latestMatch };
 }
 
 const fingerprint = teams => teams.map(t => `${t.rank}:${t.name}:${t.points}`).join('|');
+
+/* ---------- shared: sort a set of teams into a league table ---------- */
+// points, then goal difference, then goals scored, then alphabetically
+function rank(teams){
+  return teams
+    .map(t => ({ ...t, gd: t.gf - t.ga }))
+    .sort((x, y) => y.points - x.points || y.gd - x.gd || y.gf - x.gf || x.name.localeCompare(y.name))
+    .map((t, i) => ({ ...t, rank: i + 1 }));
+}
+
+/* ---------- source 3: the SPFL's own results, as a top-up ----------
+   football-data.co.uk only refreshes the Scottish lower divisions midweek, so
+   a Saturday result can be four days late. The SPFL publishes its own results
+   as plain HTML within the hour. This reads those, and adds any that are newer
+   than the newest result already in the table.
+
+   It's a top-up, not a source in its own right: the sidebar only carries recent
+   fixtures, so it can't build a season's table from scratch. If it fails, or
+   the markup changes, you simply keep the table you already had. */
+
+const MONTHS = ['january','february','march','april','may','june',
+                'july','august','september','october','november','december'];
+
+function parseSpflDate(text){
+  // "Saturday 22nd August 2026" -> "2026-08-22"
+  const m = /(\d{1,2})(?:st|nd|rd|th)\s+([A-Za-z]+)\s+(\d{4})/.exec(text || '');
+  if (!m) return null;
+  const month = MONTHS.indexOf(m[2].toLowerCase());
+  if (month < 0) return null;
+  return `${m[3]}-${String(month + 1).padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+}
+
+const strip = h => h.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+
+async function spflResults(slug){
+  const res = await fetch(`https://spfl.co.uk/league/${slug}/table`, {
+    headers: {
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+                  + '(KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+      accept: 'text/html'
+    }
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const html = await res.text();
+
+  const out = [];
+  for (const block of html.split('fixtures-list__group"').slice(1)) {
+    const date = parseSpflDate((/fixtures-list__group__day">([^<]*)</.exec(block) || [])[1]);
+    const teams = [...block.matchAll(/fixtures-list__results__team">([\s\S]*?)<\/span>/g)]
+      .map(m => strip(m[1]));
+    const score = /fixtures-list__results__score">\s*(\d+)\s*-\s*(\d+)/.exec(block);
+    if (!date || teams.length < 2 || !score) continue;
+    out.push({ date, home: teams[0], away: teams[1], hg: +score[1], ag: +score[2] });
+  }
+  if (!out.length) throw new Error('no results found in the page — the markup may have changed');
+  return out;
+}
+
+// match an SPFL club name onto whatever the results feed calls the same club
+function sameClub(a, b, groups){
+  const na = normName(a), nb = normName(b);
+  if (na === nb || na.startsWith(nb) || nb.startsWith(na)) return true;
+  return groups.some(g => g.has(na) && g.has(nb));
+}
+
+const normName = s => s.toUpperCase().replace(/[^A-Z0-9 ]/g, ' ')
+  .replace(/\bUTD\b/g, 'UNITED').replace(/\b(FC|AFC|THE)\b/g, ' ')
+  .replace(/\s+/g, ' ').trim();
+
+// the alias lists double as "these names mean the same club"
+const aliasGroups = Object.values(config.aliases)
+  .map(v => new Set([].concat(v).map(normName)))
+  .filter(g => g.size > 1);
+
+function topUp(table, results, after){
+  const fresh = results.filter(r => !after || r.date > after);
+  if (!fresh.length) return { table, added: 0, newest: after };
+
+  const find = name => table.find(t => sameClub(t.name, name, aliasGroups));
+  let added = 0, newest = after;
+
+  for (const r of fresh){
+    const h = find(r.home), a = find(r.away);
+    if (!h || !a) continue;                     // unknown club: leave well alone
+    h.played++; a.played++;
+    h.gf += r.hg; h.ga += r.ag; a.gf += r.ag; a.ga += r.hg;
+    if (r.hg > r.ag) h.points += 3;
+    else if (r.ag > r.hg) a.points += 3;
+    else { h.points++; a.points++; }
+    added++;
+    if (!newest || r.date > newest) newest = r.date;
+  }
+  return { table: rank(table), added, newest };
+}
 
 /* ---------- go ---------- */
 const leagues = {};
@@ -176,6 +265,17 @@ for (const league of config.leagues) {
   }
 
   if (result) {
+    // where the feed lags, add anything newer straight from the SPFL
+    if (league.spfl && source !== 'espn') {
+      try {
+        const merged = topUp(result.teams, await spflResults(league.spfl), result.latestMatch);
+        if (merged.added) {
+          result.teams = merged.table;
+          result.latestMatch = merged.newest;
+          notes.push(`spfl: added ${merged.added} newer result${merged.added > 1 ? 's' : ''}`);
+        }
+      } catch (err) { notes.push(`spfl: ${err.message}`); }
+    }
     const table = result.teams;
     const before = previous?.leagues?.[league.key];
     const moved = !before || fingerprint(before.teams) !== fingerprint(table);
@@ -197,7 +297,8 @@ for (const league of config.leagues) {
     const when = L.latestMatch ? `, latest result ${L.latestMatch}` : '';
     const lag = behind ? `  ** table is missing fixtures from ${L.lastFixture} **` : '';
     if (!moved && before) notes.push('table unchanged since last run');
-    const via = source === 'espn' ? '' : `  (via ${source} — ${notes[0]})`;
+    const spflNote = notes.find(n => n.startsWith('spfl: added'));
+    const via = source === 'espn' ? '' : `  (via ${source}${spflNote ? ' + SPFL' : ''} — ${notes[0]})`;
     console.log(`ok   ${label} ${table.length} teams${when}, top: ${table[0].name}${via}${lag}`);
   } else if (previous?.leagues?.[league.key]) {
     leagues[league.key] = previous.leagues[league.key];

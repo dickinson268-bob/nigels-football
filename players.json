@@ -49,14 +49,16 @@
    "name": "League One",
    "country": "Scotland",
    "espn": "sco.3",
-   "div": "SC2"
+   "div": "SC2",
+   "spfl": "league-one"
   },
   {
    "key": "sco_league_two",
    "name": "League Two",
    "country": "Scotland",
    "espn": "sco.4",
-   "div": "SC3"
+   "div": "SC3",
+   "spfl": "league-two"
   }
  ],
  "aliases": {
