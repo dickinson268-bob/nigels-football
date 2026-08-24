@@ -114,19 +114,17 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 .col-main{min-width:0}
 .col-side{position:sticky;top:54px}
 
-.filterbox{border:1px solid var(--line);background:var(--panel)}
-.filterbox{box-shadow:inset 3px 0 0 var(--amber)}
+.filterbox{border:1px solid var(--line);background:var(--panel);box-shadow:inset 3px 0 0 var(--amber)}
 .filterbox summary{
   list-style:none;cursor:pointer;padding:13px 14px;display:flex;align-items:baseline;gap:9px;
   font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;
   text-transform:uppercase;color:var(--amber);border-bottom:1px solid var(--line)
 }
+.filterbox summary::-webkit-details-marker{display:none}
 .filterbox summary::before{content:"\25B8";font-size:10px;transition:transform .15s;flex:none}
 .filterbox[open] summary::before{transform:rotate(90deg)}
 .fbtitle{flex:1}
-.filterbox summary::-webkit-details-marker{display:none}
-
-.fbcount{letter-spacing:.04em;color:var(--amber);text-transform:none}
+.fbcount{letter-spacing:.04em;color:var(--chalk);text-transform:none}
 .fbhint{margin:12px 14px;font-size:12px;line-height:1.5;color:var(--mute)}
 .fbclear{margin:0 14px 12px;width:calc(100% - 28px)}
 
@@ -137,7 +135,7 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 }
 .fteam{
   display:flex;align-items:center;gap:9px;padding:5px 14px;cursor:pointer;
-  font-size:12.5px;color:var(--mute);transition:color .12s
+  font-size:12.5px;color:var(--mute);transition:color .12s,opacity .12s
 }
 .fteam:hover{color:var(--chalk)}
 .fteam input{accent-color:var(--amber);margin:0;flex:none;width:13px;height:13px}
@@ -146,6 +144,9 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 .fteam .tcount{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--dim);flex:none}
 .fteam.on{color:var(--amber)}
 .fteam.on .tcount{color:var(--amber)}
+.fteam.off{opacity:.28;cursor:not-allowed}
+.fteam.off:hover{color:var(--mute)}
+.fteam input:disabled{cursor:not-allowed}
 
 /* what the filter does to the board */
 .filtering .entry{opacity:.26;transition:opacity .15s}
@@ -178,12 +179,7 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
   font-variation-settings:"wdth" 88;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .srcrow .via{color:var(--dim);letter-spacing:.04em;white-space:nowrap}
 .srcrow .fresh{color:var(--mute);text-align:right}
-.fresh.warm{color:var(--amber)} .fresh.cold{color:var(--bad)}
-.fresh.lag{color:var(--amber)}
-@media(max-width:620px){
-  .srcrow{grid-template-columns:minmax(0,1fr) 46px 76px minmax(0,1fr);font-size:9.5px;gap:6px;padding:8px 9px}
-  .srcrow .lgname{font-size:12px}
-}
+.fresh.warm{color:var(--amber)} .fresh.cold{color:var(--bad)} .fresh.lag{color:var(--amber)}
 .key{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim)}
 .key span{display:flex;align-items:center;gap:7px}
 .sw{width:11px;height:11px;border-radius:1px}
@@ -193,6 +189,8 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
   .strip{height:26px;gap:2px}
   .total{font-size:17px}
   .head .lbl-strip{display:none}
+  .srcrow{grid-template-columns:minmax(0,1fr) 46px 76px minmax(0,1fr);font-size:9.5px;gap:6px;padding:8px 9px}
+  .srcrow .lgname{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -213,7 +211,6 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 <div class="controls">
   <button class="ctl" id="expandAll" aria-pressed="false">Show every pick</button>
   <button class="ctl" id="highlightMe" aria-pressed="false">Find me</button>
-  <button class="ctl" id="jumpFilter">Compare picks &rarr;</button>
 </div>
 
 <div class="head">
@@ -229,8 +226,9 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
       <span class="fbtitle">Compare picks</span>
       <span class="fbcount" id="filterCount"></span>
     </summary>
-    <p class="fbhint">Tick a club to pull out everyone who backed it. Tick clubs in
-      different leagues to find the entries closest to your own.</p>
+    <p class="fbhint">Tick a club to keep only the entries that backed it. Clubs nobody
+      left in the running has picked grey out, so you can keep narrowing down until
+      you find who shares your card.</p>
     <button class="ctl fbclear" id="clearFilter">Clear all</button>
     <div id="filterList"></div>
   </details>
@@ -240,8 +238,9 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
 <div class="rules">
   <h2>How the score works</h2>
-  <p>Each entry picked one team to win each of the eight leagues before a ball was kicked, and those picks are locked for the season. Every week the table below takes each team's live league position and adds the eight numbers together. Pick the champion of every league and you finish on 8.</p>
+  <p>Each entry picked one team to win each of the eight leagues before a ball was kicked, and those picks are locked for the season. Every week the table above takes each team's live league position and adds the eight numbers together. Pick the champion of every league and you finish on 8.</p>
   <p id="prov"></p>
+
   <h2 class="srchead">Where each table came from</h2>
   <p class="srclead" id="srclead"></p>
   <div class="srcgrid" id="sources"></div>
@@ -257,6 +256,7 @@ button.ctl:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 </div>
 
 <script>
+
 // ---------------------------------------------------------------------------
 // Where to read the live standings from.
 //
@@ -436,7 +436,8 @@ function render(standings){
     `<span>Updated <b>${when.toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</b></span>` +
     `<span>Leader <b>${rows[0].name}</b> on <b>${rows[0].total}</b></span>`;
   buildFilters();
-  document.getElementById('filterBox').open = true;
+  // open alongside the table on desktop, collapsed to its header on a phone
+  document.getElementById('filterBox').open = window.innerWidth > 900;
   applyFilter();
   renderSources(standings);
   document.getElementById('prov').textContent = live
@@ -445,83 +446,83 @@ function render(standings){
 }
 
 /* ---------- filter rail ----------
-   Clubs nobody picked are left out entirely. Within one league the ticks are
-   an OR, because an entry only has one pick per league and an AND there could
-   never match anybody. Across leagues it's an AND, which is the bit that finds
-   the entries closest to your own. */
-const picked = new Map();   // league key -> Map(club -> how many backed it)
+   A funnel, not a set of independent ticks. Every selection is an AND, and
+   after each one the remaining clubs are re-counted against whoever is still
+   in the running. Anything that would leave nobody is disabled, so you can
+   only ever narrow down a real group. */
 
 function buildFilters(){
-  for (const lg of CONFIG.leagues){
+  document.getElementById('filterList').innerHTML = CONFIG.leagues.map(lg => {
     const counts = new Map();
     for (const p of CONFIG.players){
       const club = p.picks[lg.key];
       counts.set(club, (counts.get(club) || 0) + 1);
     }
-    picked.set(lg.key, counts);
-  }
-
-  document.getElementById('filterList').innerHTML = CONFIG.leagues.map(lg => {
-    const clubs = [...picked.get(lg.key)]
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const clubs = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
     return `<div class="fgroup">
       <h3>${lg.country} ${lg.name}</h3>
-      ${clubs.map(([club, n]) => `<label class="fteam">
+      ${clubs.map(([club]) => `<label class="fteam">
           <input type="checkbox" data-league="${lg.key}" value="${club}">
-          <span class="tname">${club}</span><span class="tcount">${n}</span>
+          <span class="tname">${club}</span><span class="tcount"></span>
         </label>`).join('')}
     </div>`;
   }).join('');
 }
 
+// league key -> the single club chosen in that league
 function selections(){
   const sel = new Map();
-  document.querySelectorAll('#filterList input:checked').forEach(cb => {
-    if (!sel.has(cb.dataset.league)) sel.set(cb.dataset.league, new Set());
-    sel.get(cb.dataset.league).add(cb.value);
-  });
+  document.querySelectorAll('#filterList input:checked')
+    .forEach(cb => { if (!sel.has(cb.dataset.league)) sel.set(cb.dataset.league, cb.value); });
   return sel;
 }
+
+const survivors = sel => CONFIG.players
+  .filter(p => [...sel].every(([lgKey, club]) => p.picks[lgKey] === club));
 
 function applyFilter(){
   const sel = selections();
   const active = sel.size > 0;
+  const left = survivors(sel);
+  const stillIn = new Set(left.map(p => p.name));
   document.body.classList.toggle('filtering', active);
 
-  document.querySelectorAll('.fteam').forEach(l =>
-    l.classList.toggle('on', l.querySelector('input').checked));
+  // how many of the people still in the running back each club
+  const remaining = new Map();
+  for (const p of left){
+    for (const lg of CONFIG.leagues){
+      const key = lg.key + '|' + p.picks[lg.key];
+      remaining.set(key, (remaining.get(key) || 0) + 1);
+    }
+  }
 
-  let matches = 0;
+  document.querySelectorAll('.fteam').forEach(label => {
+    const cb = label.querySelector('input');
+    const n = remaining.get(cb.dataset.league + '|' + cb.value) || 0;
+    // a club stays clickable only while somebody in the current set has it
+    cb.disabled = !cb.checked && n === 0;
+    label.classList.toggle('on', cb.checked);
+    label.classList.toggle('off', cb.disabled);
+    label.querySelector('.tcount').textContent = n || '';
+  });
+
   document.querySelectorAll('.entry').forEach(el => {
-    const row = el._row;
-    const hit = !active || [...sel].every(([lgKey, clubs]) =>
-      clubs.has(row.picks.find(p => p.league.key === lgKey).picked));
-
+    const hit = !active || stillIn.has(el._row.name);
     el.classList.toggle('match', active && hit);
     if (active){
       el.classList.toggle('open', hit);
       el.querySelector('.row').setAttribute('aria-expanded', hit);
-      if (hit) matches++;
     }
-    // mark the individual picks that caused the match
     el.querySelectorAll('.pick').forEach(cell => {
-      const on = active && hit && sel.get(cell.dataset.league)?.has(cell.dataset.team);
-      cell.classList.toggle('hit', !!on);
+      cell.classList.toggle('hit', active && hit && sel.get(cell.dataset.league) === cell.dataset.team);
     });
   });
 
-  const ticks = [...sel.values()].reduce((a, s) => a + s.size, 0);
   document.getElementById('filterCount').textContent =
-    active ? `${matches} of ${CONFIG.players.length}` : '';
+    active ? `${left.length} of ${CONFIG.players.length}` : '';
   document.getElementById('clearFilter').textContent =
-    ticks ? `Clear ${ticks} tick${ticks > 1 ? 's' : ''}` : 'Clear all';
+    sel.size ? `Clear ${sel.size} filter${sel.size > 1 ? 's' : ''}` : 'Clear all';
 }
-
-document.getElementById('jumpFilter').addEventListener('click', () => {
-  const box = document.getElementById('filterBox');
-  box.open = true;
-  box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-});
 
 document.getElementById('filterList').addEventListener('change', applyFilter);
 document.getElementById('clearFilter').addEventListener('click', () => {
@@ -570,6 +571,7 @@ async function load(file){
   }
   render(SAMPLE);
 })();
+
 </script>
 </body>
 </html>
