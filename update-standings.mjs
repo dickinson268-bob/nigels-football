@@ -156,6 +156,69 @@ async function fromResults(league) {
 
 const fingerprint = teams => teams.map(t => `${t.rank}:${t.name}:${t.points}`).join('|');
 
+/* ---------- source 3: the SPFL's own published table ----------
+   The best source for the Scottish divisions, because it's the league's own
+   table rather than one we've worked out. That matters more than it sounds:
+   Edinburgh City are currently carrying a 5 point deduction for an insolvency
+   event, and no table computed from results alone can know that.
+
+   The page carries all four divisions, so we pick out the one whose clubs match
+   the picks for this league. Parsing is deliberately generic — any <table> with
+   numbered rows — so a change of CSS class names won't break it. */
+
+const strip = h => h.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&')
+                    .replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+
+async function fromSpfl(league, expected){
+  const res = await fetch(`https://spfl.co.uk/league/${league.spfl}/table`, {
+    headers: {
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+                  + '(KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+      accept: 'text/html'
+    }
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const html = await res.text();
+
+  const tables = [...html.matchAll(/<table[\s\S]*?<\/table>/gi)].map(m => m[0]).map(t =>
+    [...t.matchAll(/<tr[\s\S]*?<\/tr>/gi)]
+      .map(r => [...r[0].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(c => strip(c[1])))
+      .filter(cells => cells.length >= 5 && /^\d+$/.test(cells[0]))
+      .map(c => ({
+        rank: +c[0],
+        name: c[1],
+        played: +c[2],
+        gd: +c[3].replace(/[^-\d]/g, ''),
+        points: +c[c.length - 1]
+      }))
+      .filter(t => Number.isFinite(t.points) && t.name)
+  ).filter(rows => rows.length >= 8);
+
+  if (!tables.length) throw new Error('no league table found in the page');
+
+  // several divisions share the page: keep the one holding this league's clubs
+  const want = new Set(expected.map(normName));
+  const scored = tables.map(rows => ({
+    rows,
+    hits: rows.filter(r => [...want].some(w => {
+      const n = normName(r.name);
+      return n === w || n.startsWith(w) || w.startsWith(n);
+    })).length
+  })).sort((a, b) => b.hits - a.hits);
+
+  if (!scored[0].hits) throw new Error("found tables, but none holding this league's clubs");
+
+  const stamps = [...html.matchAll(/Updated at\s*([\d/]+)\s*at\s*([\d:]+)/gi)].map(m => `${m[1]} ${m[2]}`);
+  const idx = tables.indexOf(scored[0].rows);
+
+  return {
+    teams: scored[0].rows.sort((a, b) => a.rank - b.rank),
+    lastModified: null,
+    latestMatch: null,
+    sourceUpdated: stamps[idx] || stamps[stamps.length - 1] || null
+  };
+}
+
 /* ---------- shared: sort a set of teams into a league table ---------- */
 // points, then goal difference, then goals scored, then alphabetically
 function rank(teams){
@@ -175,80 +238,10 @@ function rank(teams){
    fixtures, so it can't build a season's table from scratch. If it fails, or
    the markup changes, you simply keep the table you already had. */
 
-const MONTHS = ['january','february','march','april','may','june',
-                'july','august','september','october','november','december'];
-
-function parseSpflDate(text){
-  // "Saturday 22nd August 2026" -> "2026-08-22"
-  const m = /(\d{1,2})(?:st|nd|rd|th)\s+([A-Za-z]+)\s+(\d{4})/.exec(text || '');
-  if (!m) return null;
-  const month = MONTHS.indexOf(m[2].toLowerCase());
-  if (month < 0) return null;
-  return `${m[3]}-${String(month + 1).padStart(2, '0')}-${m[1].padStart(2, '0')}`;
-}
-
-const strip = h => h.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-
-async function spflResults(slug){
-  const res = await fetch(`https://spfl.co.uk/league/${slug}/table`, {
-    headers: {
-      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
-                  + '(KHTML, like Gecko) Chrome/124.0 Safari/537.36',
-      accept: 'text/html'
-    }
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const html = await res.text();
-
-  const out = [];
-  for (const block of html.split('fixtures-list__group"').slice(1)) {
-    const date = parseSpflDate((/fixtures-list__group__day">([^<]*)</.exec(block) || [])[1]);
-    const teams = [...block.matchAll(/fixtures-list__results__team">([\s\S]*?)<\/span>/g)]
-      .map(m => strip(m[1]));
-    const score = /fixtures-list__results__score">\s*(\d+)\s*-\s*(\d+)/.exec(block);
-    if (!date || teams.length < 2 || !score) continue;
-    out.push({ date, home: teams[0], away: teams[1], hg: +score[1], ag: +score[2] });
-  }
-  if (!out.length) throw new Error('no results found in the page — the markup may have changed');
-  return out;
-}
-
-// match an SPFL club name onto whatever the results feed calls the same club
-function sameClub(a, b, groups){
-  const na = normName(a), nb = normName(b);
-  if (na === nb || na.startsWith(nb) || nb.startsWith(na)) return true;
-  return groups.some(g => g.has(na) && g.has(nb));
-}
-
 const normName = s => s.toUpperCase().replace(/[^A-Z0-9 ]/g, ' ')
   .replace(/\bUTD\b/g, 'UNITED').replace(/\b(FC|AFC|THE)\b/g, ' ')
   .replace(/\s+/g, ' ').trim();
 
-// the alias lists double as "these names mean the same club"
-const aliasGroups = Object.values(config.aliases)
-  .map(v => new Set([].concat(v).map(normName)))
-  .filter(g => g.size > 1);
-
-function topUp(table, results, after){
-  const fresh = results.filter(r => !after || r.date > after);
-  if (!fresh.length) return { table, added: 0, newest: after };
-
-  const find = name => table.find(t => sameClub(t.name, name, aliasGroups));
-  let added = 0, newest = after;
-
-  for (const r of fresh){
-    const h = find(r.home), a = find(r.away);
-    if (!h || !a) continue;                     // unknown club: leave well alone
-    h.played++; a.played++;
-    h.gf += r.hg; h.ga += r.ag; a.gf += r.ag; a.ga += r.hg;
-    if (r.hg > r.ag) h.points += 3;
-    else if (r.ag > r.hg) a.points += 3;
-    else { h.points++; a.points++; }
-    added++;
-    if (!newest || r.date > newest) newest = r.date;
-  }
-  return { table: rank(table), added, newest };
-}
 
 /* ---------- go ---------- */
 const leagues = {};
@@ -259,23 +252,23 @@ for (const league of config.leagues) {
   const notes = [];
   let result = null, source = null;
 
-  for (const [name, fn] of [['espn', fromEspn], ['football-data.co.uk', fromResults]]) {
-    try { result = await fn(league); source = name; break; }
+  // clubs this league's entrants picked — used to spot the right table on the SPFL page
+  const expected = [...new Set(config.players.map(p => p.picks[league.key]))]
+    .flatMap(c => [].concat(config.aliases[c] ?? c));
+
+  const chain = league.spfl
+    ? [['spfl', () => fromSpfl(league, expected)],
+       ['football-data.co.uk', () => fromResults(league)],
+       ['espn', () => fromEspn(league)]]
+    : [['espn', () => fromEspn(league)],
+       ['football-data.co.uk', () => fromResults(league)]];
+
+  for (const [name, fn] of chain) {
+    try { result = await fn(); source = name; break; }
     catch (err) { notes.push(`${name}: ${err.message}`); }
   }
 
   if (result) {
-    // where the feed lags, add anything newer straight from the SPFL
-    if (league.spfl && source !== 'espn') {
-      try {
-        const merged = topUp(result.teams, await spflResults(league.spfl), result.latestMatch);
-        if (merged.added) {
-          result.teams = merged.table;
-          result.latestMatch = merged.newest;
-          notes.push(`spfl: added ${merged.added} newer result${merged.added > 1 ? 's' : ''}`);
-        }
-      } catch (err) { notes.push(`spfl: ${err.message}`); }
-    }
     const table = result.teams;
     const before = previous?.leagues?.[league.key];
     const moved = !before || fingerprint(before.teams) !== fingerprint(table);
@@ -290,15 +283,16 @@ for (const league of config.leagues) {
       lastModified: result.lastModified,                        // when the source file changed
       latestMatch: result.latestMatch,                          // newest result in our table
       lastFixture: await lastFixturePlayed(league),             // newest result in real life
+      sourceUpdated: result.sourceUpdated ?? null,              // the source's own timestamp
       teams: table
     };
     const L = leagues[league.key];
     const behind = L.latestMatch && L.lastFixture && L.lastFixture > L.latestMatch;
-    const when = L.latestMatch ? `, latest result ${L.latestMatch}` : '';
+    const stamp = result.sourceUpdated ? `, updated ${result.sourceUpdated}` : '';
+    const when = L.latestMatch ? `, latest result ${L.latestMatch}` : stamp;
     const lag = behind ? `  ** table is missing fixtures from ${L.lastFixture} **` : '';
     if (!moved && before) notes.push('table unchanged since last run');
-    const spflNote = notes.find(n => n.startsWith('spfl: added'));
-    const via = source === 'espn' ? '' : `  (via ${source}${spflNote ? ' + SPFL' : ''} — ${notes[0]})`;
+    const via = notes.length ? `  (via ${source} — ${notes[0]})` : `  (${source})`;
     console.log(`ok   ${label} ${table.length} teams${when}, top: ${table[0].name}${via}${lag}`);
   } else if (previous?.leagues?.[league.key]) {
     leagues[league.key] = previous.leagues[league.key];
