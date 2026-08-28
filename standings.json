@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T13:43:03.976Z",
+ "updated": "2026-08-28T00:13:14.464Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-08-27T13:42:59.990Z",
+   "checked": "2026-08-28T00:13:10.606Z",
    "changed": "2026-08-24T21:25:09.408Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-08-27T13:43:00.378Z",
+   "checked": "2026-08-28T00:13:11.025Z",
    "changed": "2026-08-23T15:18:15.984Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-08-27T13:43:00.839Z",
+   "checked": "2026-08-28T00:13:11.472Z",
    "changed": "2026-08-23T01:06:31.229Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-08-27T13:43:01.229Z",
+   "checked": "2026-08-28T00:13:11.919Z",
    "changed": "2026-08-23T01:06:31.645Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,35 +611,35 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-08-27T13:43:01.776Z",
-   "changed": "2026-08-22T21:18:24.715Z",
+   "checked": "2026-08-28T00:13:12.353Z",
+   "changed": "2026-08-28T00:13:12.353Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
-   "lastFixture": "2026-08-22",
+   "lastFixture": "2026-08-27",
    "sourceUpdated": null,
    "teams": [
     {
      "rank": 1,
+     "name": "Boreham Wood",
+     "played": 4,
+     "points": 10
+    },
+    {
+     "rank": 2,
      "name": "Southend United",
      "played": 3,
      "points": 9
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "Sutton United",
      "played": 3,
      "points": 9
     },
     {
-     "rank": 3,
-     "name": "Harrogate Town",
-     "played": 3,
-     "points": 7
-    },
-    {
      "rank": 4,
-     "name": "Boreham Wood",
+     "name": "Harrogate Town",
      "played": 3,
      "points": 7
     },
@@ -651,26 +651,26 @@
     },
     {
      "rank": 6,
-     "name": "Boston United",
-     "played": 3,
-     "points": 6
-    },
-    {
-     "rank": 7,
      "name": "AFC Hornchurch",
      "played": 3,
      "points": 6
     },
     {
-     "rank": 8,
+     "rank": 7,
      "name": "Eastleigh",
      "played": 3,
      "points": 6
     },
     {
-     "rank": 9,
+     "rank": 8,
      "name": "Worthing",
      "played": 3,
+     "points": 6
+    },
+    {
+     "rank": 9,
+     "name": "Boston United",
+     "played": 4,
      "points": 6
     },
     {
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-08-27T13:43:02.168Z",
+   "checked": "2026-08-28T00:13:12.803Z",
    "changed": "2026-08-23T01:06:32.500Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,13 +841,13 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-08-27T13:43:02.990Z",
+   "checked": "2026-08-28T00:13:13.464Z",
    "changed": "2026-08-24T14:49:39.055Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
    "latestMatch": null,
    "lastFixture": null,
-   "sourceUpdated": "26/08/2026 17:08",
+   "sourceUpdated": "27/08/2026 15:56",
    "teams": [
     {
      "rank": 1,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-08-27T13:43:03.565Z",
+   "checked": "2026-08-28T00:13:14.092Z",
    "changed": "2026-08-24T14:49:39.671Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
