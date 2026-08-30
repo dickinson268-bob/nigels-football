@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-30T15:59:11.371Z",
+ "updated": "2026-08-30T20:30:15.883Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,12 +7,12 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-08-30T15:59:06.350Z",
-   "changed": "2026-08-30T15:59:06.350Z",
+   "checked": "2026-08-30T20:30:11.690Z",
+   "changed": "2026-08-30T20:30:11.691Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
-   "lastFixture": "2026-08-29",
+   "lastFixture": "2026-08-30",
    "sourceUpdated": null,
    "teams": [
     {
@@ -71,8 +71,8 @@
     },
     {
      "rank": 10,
-     "name": "Ipswich Town",
-     "played": 1,
+     "name": "Manchester United",
+     "played": 2,
      "points": 3
     },
     {
@@ -83,32 +83,32 @@
     },
     {
      "rank": 12,
+     "name": "Ipswich Town",
+     "played": 2,
+     "points": 3
+    },
+    {
+     "rank": 13,
      "name": "Liverpool",
      "played": 2,
      "points": 2
     },
     {
-     "rank": 13,
+     "rank": 14,
      "name": "AFC Bournemouth",
      "played": 2,
      "points": 1
     },
     {
-     "rank": 14,
+     "rank": 15,
      "name": "Nottingham Forest",
      "played": 2,
      "points": 1
     },
     {
-     "rank": 15,
+     "rank": 16,
      "name": "Fulham",
      "played": 2,
-     "points": 0
-    },
-    {
-     "rank": 16,
-     "name": "Manchester United",
-     "played": 1,
      "points": 0
     },
     {
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-08-30T15:59:06.858Z",
+   "checked": "2026-08-30T20:30:12.128Z",
    "changed": "2026-08-29T18:09:19.594Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,12 +297,12 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-08-30T15:59:07.427Z",
-   "changed": "2026-08-30T15:59:07.427Z",
+   "checked": "2026-08-30T20:30:12.681Z",
+   "changed": "2026-08-30T20:30:12.681Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
-   "lastFixture": "2026-08-29",
+   "lastFixture": "2026-08-30",
    "sourceUpdated": null,
    "teams": [
     {
@@ -331,21 +331,21 @@
     },
     {
      "rank": 5,
-     "name": "Mansfield Town",
-     "played": 3,
-     "points": 6
-    },
-    {
-     "rank": 6,
      "name": "Bradford City",
      "played": 3,
      "points": 6
     },
     {
-     "rank": 7,
+     "rank": 6,
      "name": "Notts County",
      "played": 3,
      "points": 5
+    },
+    {
+     "rank": 7,
+     "name": "Luton Town",
+     "played": 2,
+     "points": 4
     },
     {
      "rank": 8,
@@ -379,74 +379,74 @@
     },
     {
      "rank": 13,
-     "name": "Luton Town",
-     "played": 3,
-     "points": 4
-    },
-    {
-     "rank": 14,
-     "name": "AFC Wimbledon",
-     "played": 3,
-     "points": 4
-    },
-    {
-     "rank": 15,
      "name": "Bromley",
      "played": 3,
      "points": 4
     },
     {
-     "rank": 16,
+     "rank": 14,
+     "name": "Mansfield Town",
+     "played": 2,
+     "points": 3
+    },
+    {
+     "rank": 15,
      "name": "Milton Keynes Dons",
      "played": 3,
      "points": 3
     },
     {
-     "rank": 17,
+     "rank": 16,
      "name": "Leyton Orient",
      "played": 3,
      "points": 3
     },
     {
-     "rank": 18,
+     "rank": 17,
      "name": "Peterborough United",
      "played": 3,
      "points": 3
     },
     {
-     "rank": 19,
+     "rank": 18,
      "name": "Stevenage",
      "played": 3,
      "points": 2
     },
     {
-     "rank": 20,
+     "rank": 19,
      "name": "Doncaster Rovers",
      "played": 3,
      "points": 2
     },
     {
-     "rank": 21,
+     "rank": 20,
      "name": "Leicester City",
      "played": 3,
      "points": 2
     },
     {
-     "rank": 22,
+     "rank": 21,
      "name": "Wycombe Wanderers",
      "played": 3,
      "points": 2
     },
     {
-     "rank": 23,
+     "rank": 22,
      "name": "Reading",
+     "played": 2,
+     "points": 1
+    },
+    {
+     "rank": 23,
+     "name": "AFC Wimbledon",
      "played": 2,
      "points": 1
     },
     {
      "rank": 24,
      "name": "Wigan Athletic",
-     "played": 3,
+     "played": 2,
      "points": 0
     }
    ]
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-08-30T15:59:08.049Z",
+   "checked": "2026-08-30T20:30:13.199Z",
    "changed": "2026-08-29T18:09:20.971Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-08-30T15:59:08.722Z",
+   "checked": "2026-08-30T20:30:13.724Z",
    "changed": "2026-08-28T23:50:32.248Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-08-30T15:59:09.304Z",
+   "checked": "2026-08-30T20:30:14.226Z",
    "changed": "2026-08-29T18:09:22.333Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,13 +841,13 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-08-30T15:59:10.180Z",
+   "checked": "2026-08-30T20:30:14.902Z",
    "changed": "2026-08-29T18:09:23.344Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
    "latestMatch": null,
    "lastFixture": null,
-   "sourceUpdated": "29/08/2026 19:20",
+   "sourceUpdated": "30/08/2026 18:34",
    "teams": [
     {
      "rank": 1,
@@ -924,13 +924,13 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-08-30T15:59:10.809Z",
+   "checked": "2026-08-30T20:30:15.522Z",
    "changed": "2026-08-29T18:09:23.971Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
    "latestMatch": null,
    "lastFixture": null,
-   "sourceUpdated": "29/08/2026 22:16",
+   "sourceUpdated": "30/08/2026 19:10",
    "teams": [
     {
      "rank": 1,
