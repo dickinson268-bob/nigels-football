@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-02T22:57:43.668Z",
+ "updated": "2026-09-03T02:49:15.217Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-02T22:57:39.379Z",
+   "checked": "2026-09-03T02:49:10.045Z",
    "changed": "2026-09-01T00:21:27.018Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-02T22:57:39.880Z",
+   "checked": "2026-09-03T02:49:10.722Z",
    "changed": "2026-09-02T22:57:39.880Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,8 +297,8 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-02T22:57:40.383Z",
-   "changed": "2026-09-02T02:44:10.526Z",
+   "checked": "2026-09-03T02:49:11.277Z",
+   "changed": "2026-09-03T02:49:11.277Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
@@ -320,104 +320,104 @@
     {
      "rank": 3,
      "name": "Blackpool",
-     "played": 3,
+     "played": 4,
      "points": 7
     },
     {
      "rank": 4,
-     "name": "Cambridge United",
+     "name": "Burton Albion",
      "played": 4,
      "points": 7
     },
     {
      "rank": 5,
-     "name": "Stockport County",
-     "played": 3,
-     "points": 6
+     "name": "Barnsley",
+     "played": 4,
+     "points": 7
     },
     {
      "rank": 6,
+     "name": "Cambridge United",
+     "played": 4,
+     "points": 7
+    },
+    {
+     "rank": 7,
+     "name": "Luton Town",
+     "played": 4,
+     "points": 7
+    },
+    {
+     "rank": 8,
      "name": "Leyton Orient",
      "played": 4,
      "points": 6
     },
     {
-     "rank": 7,
-     "name": "Mansfield Town",
-     "played": 3,
-     "points": 6
-    },
-    {
-     "rank": 8,
-     "name": "Notts County",
-     "played": 4,
-     "points": 6
-    },
-    {
      "rank": 9,
-     "name": "Bradford City",
+     "name": "Stockport County",
      "played": 4,
      "points": 6
     },
     {
      "rank": 10,
+     "name": "Notts County",
+     "played": 4,
+     "points": 6
+    },
+    {
+     "rank": 11,
+     "name": "Bradford City",
+     "played": 4,
+     "points": 6
+    },
+    {
+     "rank": 12,
+     "name": "Mansfield Town",
+     "played": 4,
+     "points": 6
+    },
+    {
+     "rank": 13,
      "name": "Leicester City",
      "played": 4,
      "points": 5
     },
     {
-     "rank": 11,
-     "name": "Barnsley",
-     "played": 3,
-     "points": 4
-    },
-    {
-     "rank": 12,
-     "name": "Burton Albion",
-     "played": 3,
-     "points": 4
-    },
-    {
-     "rank": 13,
-     "name": "Oxford United",
-     "played": 3,
-     "points": 4
-    },
-    {
      "rank": 14,
-     "name": "Luton Town",
+     "name": "Reading",
      "played": 3,
      "points": 4
     },
     {
      "rank": 15,
+     "name": "Oxford United",
+     "played": 3,
+     "points": 4
+    },
+    {
+     "rank": 16,
      "name": "Plymouth Argyle",
      "played": 4,
      "points": 4
     },
     {
-     "rank": 16,
-     "name": "AFC Wimbledon",
-     "played": 3,
-     "points": 4
-    },
-    {
      "rank": 17,
-     "name": "Peterborough United",
+     "name": "AFC Wimbledon",
      "played": 4,
      "points": 4
     },
     {
      "rank": 18,
-     "name": "Bromley",
+     "name": "Peterborough United",
      "played": 4,
      "points": 4
     },
     {
      "rank": 19,
-     "name": "Milton Keynes Dons",
-     "played": 3,
-     "points": 3
+     "name": "Bromley",
+     "played": 4,
+     "points": 4
     },
     {
      "rank": 20,
@@ -433,28 +433,28 @@
     },
     {
      "rank": 22,
-     "name": "Wycombe Wanderers",
+     "name": "Wigan Athletic",
      "played": 4,
-     "points": 2
+     "points": 3
     },
     {
      "rank": 23,
-     "name": "Reading",
-     "played": 2,
-     "points": 1
+     "name": "Milton Keynes Dons",
+     "played": 4,
+     "points": 3
     },
     {
      "rank": 24,
-     "name": "Wigan Athletic",
-     "played": 3,
-     "points": 0
+     "name": "Wycombe Wanderers",
+     "played": 4,
+     "points": 2
     }
    ]
   },
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-02T22:57:40.864Z",
+   "checked": "2026-09-03T02:49:11.908Z",
    "changed": "2026-09-01T22:58:55.157Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-02T22:57:41.344Z",
+   "checked": "2026-09-03T02:49:12.505Z",
    "changed": "2026-09-02T02:44:11.630Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-02T22:57:41.850Z",
+   "checked": "2026-09-03T02:49:13.130Z",
    "changed": "2026-08-29T18:09:22.333Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-02T22:57:42.631Z",
+   "checked": "2026-09-03T02:49:14.126Z",
    "changed": "2026-08-29T18:09:23.344Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-02T22:57:43.289Z",
+   "checked": "2026-09-03T02:49:14.808Z",
    "changed": "2026-08-29T18:09:23.971Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
