@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-04T18:03:11.708Z",
+ "updated": "2026-09-04T22:45:48.378Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,8 +7,8 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-04T18:03:07.847Z",
-   "changed": "2026-09-01T00:21:27.018Z",
+   "checked": "2026-09-04T22:45:44.183Z",
+   "changed": "2026-09-04T22:45:44.183Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
@@ -41,57 +41,57 @@
     },
     {
      "rank": 5,
+     "name": "Liverpool",
+     "played": 3,
+     "points": 5
+    },
+    {
+     "rank": 6,
      "name": "Brentford",
      "played": 2,
      "points": 4
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Newcastle United",
      "played": 2,
      "points": 4
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Everton",
      "played": 2,
      "points": 4
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Leeds United",
      "played": 2,
      "points": 4
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Brighton & Hove Albion",
      "played": 2,
      "points": 3
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Manchester United",
      "played": 2,
      "points": 3
     },
     {
-     "rank": 11,
+     "rank": 12,
      "name": "Sunderland",
      "played": 2,
      "points": 3
     },
     {
-     "rank": 12,
-     "name": "Ipswich Town",
-     "played": 2,
-     "points": 3
-    },
-    {
      "rank": 13,
-     "name": "Liverpool",
-     "played": 2,
-     "points": 2
+     "name": "Ipswich Town",
+     "played": 3,
+     "points": 3
     },
     {
      "rank": 14,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-04T18:03:08.287Z",
+   "checked": "2026-09-04T22:45:44.617Z",
    "changed": "2026-09-02T22:57:39.880Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-04T18:03:08.699Z",
+   "checked": "2026-09-04T22:45:45.042Z",
    "changed": "2026-09-03T02:49:11.277Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-04T18:03:09.108Z",
+   "checked": "2026-09-04T22:45:45.471Z",
    "changed": "2026-09-01T22:58:55.157Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,8 +611,8 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-04T18:03:09.530Z",
-   "changed": "2026-09-02T02:44:11.630Z",
+   "checked": "2026-09-04T22:45:45.963Z",
+   "changed": "2026-09-04T22:45:45.963Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
@@ -664,54 +664,54 @@
     {
      "rank": 8,
      "name": "Eastleigh",
-     "played": 5,
+     "played": 6,
      "points": 10
     },
     {
      "rank": 9,
+     "name": "Altrincham",
+     "played": 6,
+     "points": 9
+    },
+    {
+     "rank": 10,
      "name": "Carlisle United",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Aldershot Town",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 11,
+     "rank": 12,
      "name": "Kidderminster Harriers",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 12,
+     "rank": 13,
      "name": "FC Halifax Town",
      "played": 5,
      "points": 6
     },
     {
-     "rank": 13,
+     "rank": 14,
      "name": "Boston United",
      "played": 5,
      "points": 6
     },
     {
-     "rank": 14,
+     "rank": 15,
      "name": "Hartlepool United",
      "played": 5,
      "points": 6
     },
     {
-     "rank": 15,
-     "name": "Worthing",
-     "played": 5,
-     "points": 6
-    },
-    {
      "rank": 16,
-     "name": "Altrincham",
+     "name": "Worthing",
      "played": 5,
      "points": 6
     },
@@ -768,8 +768,8 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-04T18:03:09.940Z",
-   "changed": "2026-08-29T18:09:22.333Z",
+   "checked": "2026-09-04T22:45:46.383Z",
+   "changed": "2026-09-04T22:45:46.383Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
    "latestMatch": null,
@@ -779,8 +779,8 @@
     {
      "rank": 1,
      "name": "Stenhousemuir",
-     "played": 4,
-     "points": 10
+     "played": 5,
+     "points": 13
     },
     {
      "rank": 2,
@@ -803,7 +803,7 @@
     {
      "rank": 5,
      "name": "Livingston",
-     "played": 4,
+     "played": 5,
      "points": 6
     },
     {
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-04T18:03:10.767Z",
+   "checked": "2026-09-04T22:45:47.350Z",
    "changed": "2026-08-29T18:09:23.344Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-04T18:03:11.363Z",
+   "checked": "2026-09-04T22:45:48.014Z",
    "changed": "2026-08-29T18:09:23.971Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
