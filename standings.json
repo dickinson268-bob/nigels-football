@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-10T22:55:24.802Z",
+ "updated": "2026-09-11T02:52:35.822Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-10T22:55:20.408Z",
+   "checked": "2026-09-11T02:52:31.866Z",
    "changed": "2026-09-06T17:29:25.892Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-10T22:55:20.895Z",
+   "checked": "2026-09-11T02:52:32.280Z",
    "changed": "2026-09-09T22:53:44.618Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,8 +297,8 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-10T22:55:21.451Z",
-   "changed": "2026-09-08T02:56:26.424Z",
+   "checked": "2026-09-11T02:52:32.693Z",
+   "changed": "2026-09-11T02:52:32.693Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
@@ -325,81 +325,81 @@
     },
     {
      "rank": 4,
+     "name": "Stevenage",
+     "played": 6,
+     "points": 9
+    },
+    {
+     "rank": 5,
      "name": "Bradford City",
      "played": 5,
      "points": 9
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Burton Albion",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Cambridge United",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Luton Town",
-     "played": 5,
+     "played": 6,
      "points": 8
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Reading",
      "played": 4,
      "points": 7
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Leyton Orient",
      "played": 5,
      "points": 7
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Oxford United",
      "played": 4,
      "points": 7
     },
     {
-     "rank": 11,
+     "rank": 12,
      "name": "Blackpool",
      "played": 5,
      "points": 7
     },
     {
-     "rank": 12,
+     "rank": 13,
      "name": "Notts County",
      "played": 5,
      "points": 7
     },
     {
-     "rank": 13,
+     "rank": 14,
      "name": "Plymouth Argyle",
      "played": 5,
      "points": 7
     },
     {
-     "rank": 14,
+     "rank": 15,
      "name": "Barnsley",
      "played": 5,
      "points": 7
     },
     {
-     "rank": 15,
+     "rank": 16,
      "name": "AFC Wimbledon",
      "played": 5,
      "points": 7
-    },
-    {
-     "rank": 16,
-     "name": "Stevenage",
-     "played": 5,
-     "points": 6
     },
     {
      "rank": 17,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-10T22:55:21.989Z",
+   "checked": "2026-09-11T02:52:33.109Z",
    "changed": "2026-09-05T22:37:28.827Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-10T22:55:22.459Z",
+   "checked": "2026-09-11T02:52:33.520Z",
    "changed": "2026-09-06T02:47:29.314Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-10T22:55:22.923Z",
+   "checked": "2026-09-11T02:52:34.019Z",
    "changed": "2026-09-05T17:07:04.075Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-10T22:55:23.764Z",
+   "checked": "2026-09-11T02:52:34.786Z",
    "changed": "2026-09-05T17:07:04.936Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-10T22:55:24.435Z",
+   "checked": "2026-09-11T02:52:35.456Z",
    "changed": "2026-09-05T17:07:05.842Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
