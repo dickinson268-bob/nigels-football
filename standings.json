@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-16T16:04:08.315Z",
+ "updated": "2026-09-16T20:50:25.242Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-16T16:04:03.364Z",
+   "checked": "2026-09-16T20:50:21.136Z",
    "changed": "2026-09-14T21:25:27.946Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-16T16:04:04.114Z",
+   "checked": "2026-09-16T20:50:21.647Z",
    "changed": "2026-09-15T20:50:19.447Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-16T16:04:04.668Z",
+   "checked": "2026-09-16T20:50:22.183Z",
    "changed": "2026-09-12T17:40:20.569Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-16T16:04:05.153Z",
+   "checked": "2026-09-16T20:50:22.616Z",
    "changed": "2026-09-12T17:40:21.247Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,8 +611,8 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-16T16:04:05.723Z",
-   "changed": "2026-09-15T23:23:10.681Z",
+   "checked": "2026-09-16T20:50:23.117Z",
+   "changed": "2026-09-16T20:50:23.117Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
@@ -621,14 +621,14 @@
    "teams": [
     {
      "rank": 1,
-     "name": "AFC Fylde",
+     "name": "Boreham Wood",
      "played": 8,
-     "points": 17
+     "points": 20
     },
     {
      "rank": 2,
-     "name": "Boreham Wood",
-     "played": 7,
+     "name": "AFC Fylde",
+     "played": 8,
      "points": 17
     },
     {
@@ -639,27 +639,27 @@
     },
     {
      "rank": 4,
+     "name": "Kidderminster Harriers",
+     "played": 8,
+     "points": 17
+    },
+    {
+     "rank": 5,
      "name": "Harrogate Town",
      "played": 8,
      "points": 16
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Aldershot Town",
      "played": 8,
      "points": 15
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Sutton United",
      "played": 8,
      "points": 15
-    },
-    {
-     "rank": 7,
-     "name": "Kidderminster Harriers",
-     "played": 7,
-     "points": 14
     },
     {
      "rank": 8,
@@ -687,32 +687,32 @@
     },
     {
      "rank": 12,
+     "name": "Altrincham",
+     "played": 8,
+     "points": 12
+    },
+    {
+     "rank": 13,
      "name": "Worthing",
      "played": 8,
      "points": 11
     },
     {
-     "rank": 13,
+     "rank": 14,
      "name": "Eastleigh",
      "played": 8,
      "points": 11
     },
     {
-     "rank": 14,
+     "rank": 15,
      "name": "Carlisle United",
      "played": 8,
      "points": 10
     },
     {
-     "rank": 15,
-     "name": "Hartlepool United",
-     "played": 7,
-     "points": 9
-    },
-    {
      "rank": 16,
-     "name": "Altrincham",
-     "played": 7,
+     "name": "Hartlepool United",
+     "played": 8,
      "points": 9
     },
     {
@@ -736,7 +736,7 @@
     {
      "rank": 20,
      "name": "Scunthorpe United",
-     "played": 7,
+     "played": 8,
      "points": 7
     },
     {
@@ -754,7 +754,7 @@
     {
      "rank": 23,
      "name": "Gateshead",
-     "played": 7,
+     "played": 8,
      "points": 4
     },
     {
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-16T16:04:06.464Z",
+   "checked": "2026-09-16T20:50:23.572Z",
    "changed": "2026-09-15T23:23:11.127Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-16T16:04:07.310Z",
+   "checked": "2026-09-16T20:50:24.263Z",
    "changed": "2026-09-15T20:50:22.241Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-16T16:04:07.925Z",
+   "checked": "2026-09-16T20:50:24.867Z",
    "changed": "2026-09-12T17:40:24.099Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
