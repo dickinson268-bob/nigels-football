@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-20T10:34:24.500Z",
+ "updated": "2026-09-20T15:23:08.365Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,8 +7,8 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-20T10:34:20.263Z",
-   "changed": "2026-09-19T19:59:41.805Z",
+   "checked": "2026-09-20T15:23:03.972Z",
+   "changed": "2026-09-20T15:23:03.973Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
@@ -18,8 +18,8 @@
     {
      "rank": 1,
      "name": "Manchester City",
-     "played": 4,
-     "points": 12
+     "played": 5,
+     "points": 15
     },
     {
      "rank": 2,
@@ -41,39 +41,39 @@
     },
     {
      "rank": 5,
-     "name": "Everton",
+     "name": "Leeds United",
      "played": 5,
      "points": 9
     },
     {
      "rank": 6,
-     "name": "Leeds United",
-     "played": 4,
-     "points": 8
+     "name": "Liverpool",
+     "played": 5,
+     "points": 9
     },
     {
      "rank": 7,
+     "name": "Everton",
+     "played": 5,
+     "points": 9
+    },
+    {
+     "rank": 8,
      "name": "Hull City",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Newcastle United",
      "played": 5,
      "points": 8
     },
     {
-     "rank": 9,
+     "rank": 10,
      "name": "Chelsea",
      "played": 5,
      "points": 7
-    },
-    {
-     "rank": 10,
-     "name": "Liverpool",
-     "played": 4,
-     "points": 6
     },
     {
      "rank": 11,
@@ -96,25 +96,25 @@
     {
      "rank": 14,
      "name": "Sunderland",
-     "played": 4,
+     "played": 5,
      "points": 4
     },
     {
      "rank": 15,
-     "name": "Aston Villa",
+     "name": "Crystal Palace",
      "played": 5,
      "points": 4
     },
     {
      "rank": 16,
-     "name": "AFC Bournemouth",
-     "played": 4,
-     "points": 3
+     "name": "Aston Villa",
+     "played": 5,
+     "points": 4
     },
     {
      "rank": 17,
-     "name": "Crystal Palace",
-     "played": 4,
+     "name": "AFC Bournemouth",
+     "played": 5,
      "points": 3
     },
     {
@@ -140,8 +140,8 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-20T10:34:20.704Z",
-   "changed": "2026-09-19T17:44:52.114Z",
+   "checked": "2026-09-20T15:23:04.448Z",
+   "changed": "2026-09-20T15:23:04.448Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
    "latestMatch": null,
@@ -168,39 +168,39 @@
     },
     {
      "rank": 4,
-     "name": "West Bromwich Albion",
+     "name": "Wolverhampton Wanderers",
      "played": 7,
      "points": 14
     },
     {
      "rank": 5,
+     "name": "West Bromwich Albion",
+     "played": 8,
+     "points": 14
+    },
+    {
+     "rank": 6,
      "name": "Queens Park Rangers",
      "played": 8,
      "points": 13
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Stoke City",
      "played": 8,
      "points": 13
     },
     {
-     "rank": 7,
+     "rank": 8,
      "name": "Bristol City",
      "played": 8,
      "points": 13
     },
     {
-     "rank": 8,
+     "rank": 9,
      "name": "Charlton Athletic",
      "played": 8,
      "points": 12
-    },
-    {
-     "rank": 9,
-     "name": "Wolverhampton Wanderers",
-     "played": 6,
-     "points": 11
     },
     {
      "rank": 10,
@@ -234,9 +234,9 @@
     },
     {
      "rank": 15,
-     "name": "Norwich City",
-     "played": 7,
-     "points": 9
+     "name": "Bolton Wanderers",
+     "played": 8,
+     "points": 10
     },
     {
      "rank": 16,
@@ -246,32 +246,32 @@
     },
     {
      "rank": 17,
-     "name": "Sheffield United",
+     "name": "Norwich City",
      "played": 8,
      "points": 9
     },
     {
      "rank": 18,
+     "name": "Sheffield United",
+     "played": 8,
+     "points": 9
+    },
+    {
+     "rank": 19,
      "name": "Portsmouth",
      "played": 7,
      "points": 8
     },
     {
-     "rank": 19,
+     "rank": 20,
      "name": "Watford",
      "played": 8,
      "points": 8
     },
     {
-     "rank": 20,
+     "rank": 21,
      "name": "Cardiff City",
      "played": 8,
-     "points": 7
-    },
-    {
-     "rank": 21,
-     "name": "Bolton Wanderers",
-     "played": 7,
      "points": 7
     },
     {
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-20T10:34:21.152Z",
+   "checked": "2026-09-20T15:23:04.943Z",
    "changed": "2026-09-19T17:44:52.567Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-20T10:34:21.695Z",
+   "checked": "2026-09-20T15:23:05.384Z",
    "changed": "2026-09-19T17:44:52.973Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-20T10:34:22.186Z",
+   "checked": "2026-09-20T15:23:05.904Z",
    "changed": "2026-09-19T19:59:43.548Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-20T10:34:22.654Z",
+   "checked": "2026-09-20T15:23:06.401Z",
    "changed": "2026-09-19T17:44:54.014Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-20T10:34:23.475Z",
+   "checked": "2026-09-20T15:23:07.269Z",
    "changed": "2026-09-19T17:44:55.106Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-20T10:34:24.121Z",
+   "checked": "2026-09-20T15:23:07.917Z",
    "changed": "2026-09-19T17:44:55.879Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
