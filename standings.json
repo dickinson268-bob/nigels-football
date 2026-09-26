@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-25T21:03:49.667Z",
+ "updated": "2026-09-26T03:22:59.188Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-25T21:03:45.646Z",
+   "checked": "2026-09-26T03:22:55.044Z",
    "changed": "2026-09-20T20:16:40.702Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-25T21:03:46.066Z",
+   "checked": "2026-09-26T03:22:55.440Z",
    "changed": "2026-09-20T15:23:04.448Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-25T21:03:46.689Z",
+   "checked": "2026-09-26T03:22:55.954Z",
    "changed": "2026-09-19T17:44:52.567Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-25T21:03:47.153Z",
+   "checked": "2026-09-26T03:22:56.447Z",
    "changed": "2026-09-19T17:44:52.973Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-25T21:03:47.673Z",
+   "checked": "2026-09-26T03:22:57.053Z",
    "changed": "2026-09-19T19:59:43.548Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,8 +768,8 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-25T21:03:48.132Z",
-   "changed": "2026-09-19T17:44:54.014Z",
+   "checked": "2026-09-26T03:22:57.524Z",
+   "changed": "2026-09-26T03:22:57.525Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
    "latestMatch": null,
@@ -779,61 +779,61 @@
     {
      "rank": 1,
      "name": "Stenhousemuir",
-     "played": 7,
-     "points": 19
+     "played": 8,
+     "points": 22
     },
     {
      "rank": 2,
      "name": "Raith Rovers",
-     "played": 7,
+     "played": 8,
      "points": 14
     },
     {
      "rank": 3,
+     "name": "Livingston",
+     "played": 8,
+     "points": 13
+    },
+    {
+     "rank": 4,
      "name": "Partick Thistle",
      "played": 7,
      "points": 12
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Dunfermline Athletic",
      "played": 7,
      "points": 12
     },
     {
-     "rank": 5,
-     "name": "Livingston",
-     "played": 7,
-     "points": 10
-    },
-    {
      "rank": 6,
-     "name": "Ayr United",
-     "played": 7,
-     "points": 8
+     "name": "Arbroath",
+     "played": 8,
+     "points": 11
     },
     {
      "rank": 7,
-     "name": "Arbroath",
-     "played": 7,
-     "points": 8
+     "name": "Inverness Caledonian Thistle",
+     "played": 8,
+     "points": 10
     },
     {
      "rank": 8,
-     "name": "Inverness Caledonian Thistle",
-     "played": 7,
-     "points": 7
+     "name": "Ayr United",
+     "played": 8,
+     "points": 8
     },
     {
      "rank": 9,
      "name": "Queen's Park",
-     "played": 7,
+     "played": 8,
      "points": 4
     },
     {
      "rank": 10,
      "name": "Greenock Morton",
-     "played": 7,
+     "played": 8,
      "points": 1
     }
    ]
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-25T21:03:48.757Z",
+   "checked": "2026-09-26T03:22:58.202Z",
    "changed": "2026-09-19T17:44:55.106Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-25T21:03:49.315Z",
+   "checked": "2026-09-26T03:22:58.835Z",
    "changed": "2026-09-19T17:44:55.879Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
