@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T21:50:26.091Z",
+ "updated": "2026-10-01T04:00:28.136Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-09-30T21:50:22.153Z",
+   "checked": "2026-10-01T04:00:24.575Z",
    "changed": "2026-09-20T20:16:40.702Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-09-30T21:50:22.584Z",
+   "checked": "2026-10-01T04:00:25.001Z",
    "changed": "2026-09-20T15:23:04.448Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-09-30T21:50:23.027Z",
+   "checked": "2026-10-01T04:00:25.381Z",
    "changed": "2026-09-26T20:36:58.392Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-09-30T21:50:23.446Z",
+   "checked": "2026-10-01T04:00:25.779Z",
    "changed": "2026-09-26T20:36:58.982Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,8 +611,8 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-09-30T21:50:23.875Z",
-   "changed": "2026-09-30T00:03:07.974Z",
+   "checked": "2026-10-01T04:00:26.199Z",
+   "changed": "2026-10-01T04:00:26.199Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
@@ -633,15 +633,15 @@
     },
     {
      "rank": 3,
-     "name": "Altrincham",
+     "name": "Southend United",
      "played": 11,
      "points": 21
     },
     {
      "rank": 4,
-     "name": "Southend United",
-     "played": 10,
-     "points": 20
+     "name": "Altrincham",
+     "played": 11,
+     "points": 21
     },
     {
      "rank": 5,
@@ -682,7 +682,7 @@
     {
      "rank": 11,
      "name": "Sutton United",
-     "played": 10,
+     "played": 11,
      "points": 17
     },
     {
@@ -699,14 +699,14 @@
     },
     {
      "rank": 14,
-     "name": "FC Halifax Town",
+     "name": "Eastleigh",
      "played": 11,
-     "points": 14
+     "points": 15
     },
     {
      "rank": 15,
-     "name": "Eastleigh",
-     "played": 10,
+     "name": "FC Halifax Town",
+     "played": 11,
      "points": 14
     },
     {
@@ -735,21 +735,21 @@
     },
     {
      "rank": 20,
+     "name": "Tamworth",
+     "played": 11,
+     "points": 11
+    },
+    {
+     "rank": 21,
      "name": "Scunthorpe United",
      "played": 11,
      "points": 10
     },
     {
-     "rank": 21,
+     "rank": 22,
      "name": "Hartlepool United",
      "played": 11,
      "points": 9
-    },
-    {
-     "rank": 22,
-     "name": "Tamworth",
-     "played": 10,
-     "points": 8
     },
     {
      "rank": 23,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-09-30T21:50:24.297Z",
+   "checked": "2026-10-01T04:00:26.641Z",
    "changed": "2026-09-26T03:22:57.525Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-09-30T21:50:25.058Z",
+   "checked": "2026-10-01T04:00:27.214Z",
    "changed": "2026-09-19T17:44:55.106Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-09-30T21:50:25.723Z",
+   "checked": "2026-10-01T04:00:27.763Z",
    "changed": "2026-09-19T17:44:55.879Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
