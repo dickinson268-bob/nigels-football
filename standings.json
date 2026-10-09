@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T17:55:59.765Z",
+ "updated": "2026-10-09T22:17:24.321Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-09T17:55:55.264Z",
+   "checked": "2026-10-09T22:17:19.340Z",
    "changed": "2026-09-20T20:16:40.702Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,8 +140,8 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-09T17:55:55.748Z",
-   "changed": "2026-09-20T15:23:04.448Z",
+   "checked": "2026-10-09T22:17:19.769Z",
+   "changed": "2026-10-09T22:17:19.769Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
    "latestMatch": null,
@@ -157,8 +157,8 @@
     {
      "rank": 2,
      "name": "West Ham United",
-     "played": 8,
-     "points": 15
+     "played": 9,
+     "points": 16
     },
     {
      "rank": 3,
@@ -174,15 +174,15 @@
     },
     {
      "rank": 5,
-     "name": "West Bromwich Albion",
-     "played": 8,
+     "name": "Queens Park Rangers",
+     "played": 9,
      "points": 14
     },
     {
      "rank": 6,
-     "name": "Queens Park Rangers",
+     "name": "West Bromwich Albion",
      "played": 8,
-     "points": 13
+     "points": 14
     },
     {
      "rank": 7,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-09T17:55:56.229Z",
+   "checked": "2026-10-09T22:17:20.511Z",
    "changed": "2026-10-03T20:34:00.609Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-09T17:55:56.707Z",
+   "checked": "2026-10-09T22:17:21.389Z",
    "changed": "2026-10-03T20:34:01.050Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,8 +611,8 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-09T17:55:57.236Z",
-   "changed": "2026-10-03T20:34:01.493Z",
+   "checked": "2026-10-09T22:17:21.898Z",
+   "changed": "2026-10-09T22:17:21.898Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
@@ -622,8 +622,8 @@
     {
      "rank": 1,
      "name": "Boreham Wood",
-     "played": 12,
-     "points": 32
+     "played": 13,
+     "points": 35
     },
     {
      "rank": 2,
@@ -682,7 +682,7 @@
     {
      "rank": 11,
      "name": "Sutton United",
-     "played": 12,
+     "played": 13,
      "points": 18
     },
     {
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-09T17:55:57.719Z",
+   "checked": "2026-10-09T22:17:22.459Z",
    "changed": "2026-10-03T20:34:01.966Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-09T17:55:58.573Z",
+   "checked": "2026-10-09T22:17:23.242Z",
    "changed": "2026-10-03T20:34:02.706Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-09T17:55:59.378Z",
+   "checked": "2026-10-09T22:17:23.960Z",
    "changed": "2026-10-03T15:40:17.828Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
