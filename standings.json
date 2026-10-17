@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T17:44:46.066Z",
+ "updated": "2026-10-17T20:03:17.750Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,8 +7,8 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-17T17:44:42.550Z",
-   "changed": "2026-10-17T17:44:42.550Z",
+   "checked": "2026-10-17T20:03:14.194Z",
+   "changed": "2026-10-17T20:03:14.194Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
@@ -78,42 +78,42 @@
     {
      "rank": 11,
      "name": "Newcastle United",
-     "played": 6,
+     "played": 7,
      "points": 8
     },
     {
      "rank": 12,
+     "name": "Aston Villa",
+     "played": 7,
+     "points": 8
+    },
+    {
+     "rank": 13,
      "name": "Crystal Palace",
      "played": 6,
      "points": 7
     },
     {
-     "rank": 13,
+     "rank": 14,
      "name": "Manchester United",
      "played": 6,
      "points": 6
     },
     {
-     "rank": 14,
+     "rank": 15,
      "name": "Coventry City",
      "played": 6,
      "points": 6
     },
     {
-     "rank": 15,
+     "rank": 16,
      "name": "Fulham",
      "played": 7,
      "points": 5
     },
     {
-     "rank": 16,
-     "name": "Nottingham Forest",
-     "played": 6,
-     "points": 5
-    },
-    {
      "rank": 17,
-     "name": "Aston Villa",
+     "name": "Nottingham Forest",
      "played": 6,
      "points": 5
     },
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-17T17:44:42.938Z",
+   "checked": "2026-10-17T20:03:14.594Z",
    "changed": "2026-10-17T17:44:42.938Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-17T17:44:43.339Z",
+   "checked": "2026-10-17T20:03:14.962Z",
    "changed": "2026-10-17T17:44:43.339Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-17T17:44:43.754Z",
+   "checked": "2026-10-17T20:03:15.353Z",
    "changed": "2026-10-17T17:44:43.754Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-17T17:44:44.182Z",
+   "checked": "2026-10-17T20:03:15.798Z",
    "changed": "2026-10-10T21:07:05.098Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-17T17:44:44.556Z",
+   "checked": "2026-10-17T20:03:16.204Z",
    "changed": "2026-10-17T17:44:44.556Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,13 +841,13 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-17T17:44:45.185Z",
-   "changed": "2026-10-17T17:44:45.185Z",
+   "checked": "2026-10-17T20:03:16.831Z",
+   "changed": "2026-10-17T20:03:16.831Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
    "latestMatch": null,
    "lastFixture": null,
-   "sourceUpdated": "17/10/2026 18:38",
+   "sourceUpdated": "17/10/2026 19:25",
    "teams": [
     {
      "rank": 1,
@@ -860,8 +860,8 @@
      "rank": 2,
      "name": "Hamilton Academical",
      "played": 10,
-     "gd": 19,
-     "points": 26
+     "gd": 20,
+     "points": 28
     },
     {
      "rank": 3,
@@ -881,8 +881,8 @@
      "rank": 5,
      "name": "Airdrieonians",
      "played": 11,
-     "gd": -4,
-     "points": 14
+     "gd": -5,
+     "points": 13
     },
     {
      "rank": 6,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-17T17:44:45.727Z",
+   "checked": "2026-10-17T20:03:17.417Z",
    "changed": "2026-10-17T17:44:45.727Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
