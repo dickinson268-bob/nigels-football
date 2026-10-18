@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T12:57:25.626Z",
+ "updated": "2026-10-18T17:47:16.010Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,8 +7,8 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-18T12:57:21.824Z",
-   "changed": "2026-10-17T20:03:14.194Z",
+   "checked": "2026-10-18T17:47:12.022Z",
+   "changed": "2026-10-18T17:47:12.023Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
@@ -24,14 +24,14 @@
     {
      "rank": 2,
      "name": "Arsenal",
-     "played": 6,
-     "points": 15
+     "played": 7,
+     "points": 18
     },
     {
      "rank": 3,
      "name": "Brighton & Hove Albion",
-     "played": 6,
-     "points": 13
+     "played": 7,
+     "points": 16
     },
     {
      "rank": 4,
@@ -53,15 +53,15 @@
     },
     {
      "rank": 7,
-     "name": "Everton",
+     "name": "Leeds United",
      "played": 7,
      "points": 10
     },
     {
      "rank": 8,
-     "name": "Leeds United",
-     "played": 6,
-     "points": 9
+     "name": "Everton",
+     "played": 7,
+     "points": 10
     },
     {
      "rank": 9,
@@ -89,45 +89,45 @@
     },
     {
      "rank": 13,
-     "name": "Crystal Palace",
-     "played": 6,
+     "name": "Manchester United",
+     "played": 7,
      "points": 7
     },
     {
      "rank": 14,
-     "name": "Manchester United",
-     "played": 6,
-     "points": 6
+     "name": "Crystal Palace",
+     "played": 7,
+     "points": 7
     },
     {
      "rank": 15,
+     "name": "AFC Bournemouth",
+     "played": 7,
+     "points": 6
+    },
+    {
+     "rank": 16,
      "name": "Coventry City",
      "played": 6,
      "points": 6
     },
     {
-     "rank": 16,
+     "rank": 17,
      "name": "Fulham",
      "played": 7,
      "points": 5
     },
     {
-     "rank": 17,
+     "rank": 18,
      "name": "Nottingham Forest",
-     "played": 6,
+     "played": 7,
      "points": 5
     },
     {
-     "rank": 18,
-     "name": "Sunderland",
-     "played": 6,
-     "points": 4
-    },
-    {
      "rank": 19,
-     "name": "AFC Bournemouth",
-     "played": 6,
-     "points": 3
+     "name": "Sunderland",
+     "played": 7,
+     "points": 4
     },
     {
      "rank": 20,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-18T12:57:22.226Z",
+   "checked": "2026-10-18T17:47:12.517Z",
    "changed": "2026-10-17T17:44:42.938Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-18T12:57:22.625Z",
+   "checked": "2026-10-18T17:47:12.955Z",
    "changed": "2026-10-17T17:44:43.339Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-18T12:57:23.071Z",
+   "checked": "2026-10-18T17:47:13.391Z",
    "changed": "2026-10-17T17:44:43.754Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-18T12:57:23.461Z",
+   "checked": "2026-10-18T17:47:13.850Z",
    "changed": "2026-10-10T21:07:05.098Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-18T12:57:23.894Z",
+   "checked": "2026-10-18T17:47:14.280Z",
    "changed": "2026-10-17T17:44:44.556Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-18T12:57:24.696Z",
+   "checked": "2026-10-18T17:47:15.000Z",
    "changed": "2026-10-17T20:03:16.831Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-18T12:57:25.256Z",
+   "checked": "2026-10-18T17:47:15.638Z",
    "changed": "2026-10-17T17:44:45.727Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
