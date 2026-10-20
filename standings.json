@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T18:53:07.049Z",
+ "updated": "2026-10-20T23:36:24.781Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-20T18:53:02.929Z",
+   "checked": "2026-10-20T23:36:21.083Z",
    "changed": "2026-10-20T00:05:23.491Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,8 +140,8 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-20T18:53:03.410Z",
-   "changed": "2026-10-17T17:44:42.938Z",
+   "checked": "2026-10-20T23:36:21.509Z",
+   "changed": "2026-10-20T23:36:21.509Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
    "latestMatch": null,
@@ -186,14 +186,14 @@
     },
     {
      "rank": 7,
-     "name": "Southampton",
+     "name": "Wolverhampton Wanderers",
      "played": 11,
-     "points": 17
+     "points": 18
     },
     {
      "rank": 8,
-     "name": "Wolverhampton Wanderers",
-     "played": 10,
+     "name": "Southampton",
+     "played": 11,
      "points": 17
     },
     {
@@ -223,8 +223,8 @@
     {
      "rank": 13,
      "name": "Portsmouth",
-     "played": 10,
-     "points": 14
+     "played": 11,
+     "points": 15
     },
     {
      "rank": 14,
@@ -297,8 +297,8 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-20T18:53:03.885Z",
-   "changed": "2026-10-17T17:44:43.339Z",
+   "checked": "2026-10-20T23:36:21.973Z",
+   "changed": "2026-10-20T23:36:21.973Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
@@ -307,146 +307,146 @@
    "teams": [
     {
      "rank": 1,
-     "name": "Bradford City",
-     "played": 10,
-     "points": 20
+     "name": "Stockport County",
+     "played": 11,
+     "points": 22
     },
     {
      "rank": 2,
-     "name": "Stockport County",
-     "played": 10,
-     "points": 19
+     "name": "Huddersfield Town",
+     "played": 11,
+     "points": 22
     },
     {
      "rank": 3,
-     "name": "Huddersfield Town",
-     "played": 10,
-     "points": 19
+     "name": "Bradford City",
+     "played": 11,
+     "points": 21
     },
     {
      "rank": 4,
-     "name": "Plymouth Argyle",
+     "name": "Cambridge United",
      "played": 11,
-     "points": 19
+     "points": 20
     },
     {
      "rank": 5,
-     "name": "Cambridge United",
-     "played": 10,
+     "name": "Plymouth Argyle",
+     "played": 12,
      "points": 19
     },
     {
      "rank": 6,
      "name": "Sheffield Wednesday",
-     "played": 9,
+     "played": 10,
      "points": 18
     },
     {
      "rank": 7,
+     "name": "Oxford United",
+     "played": 9,
+     "points": 18
+    },
+    {
+     "rank": 8,
      "name": "Reading",
      "played": 10,
      "points": 15
     },
     {
-     "rank": 8,
-     "name": "Oxford United",
-     "played": 8,
+     "rank": 9,
+     "name": "Stevenage",
+     "played": 10,
      "points": 15
     },
     {
-     "rank": 9,
+     "rank": 10,
+     "name": "Leicester City",
+     "played": 10,
+     "points": 15
+    },
+    {
+     "rank": 11,
+     "name": "Mansfield Town",
+     "played": 10,
+     "points": 15
+    },
+    {
+     "rank": 12,
      "name": "Leyton Orient",
      "played": 10,
      "points": 14
     },
     {
-     "rank": 10,
-     "name": "Burton Albion",
-     "played": 11,
-     "points": 13
-    },
-    {
-     "rank": 11,
-     "name": "Wycombe Wanderers",
-     "played": 10,
-     "points": 13
-    },
-    {
-     "rank": 12,
-     "name": "Stevenage",
-     "played": 9,
-     "points": 12
-    },
-    {
      "rank": 13,
-     "name": "Mansfield Town",
-     "played": 9,
-     "points": 12
+     "name": "Luton Town",
+     "played": 10,
+     "points": 14
     },
     {
      "rank": 14,
-     "name": "Leicester City",
-     "played": 9,
-     "points": 12
+     "name": "Burton Albion",
+     "played": 12,
+     "points": 14
     },
     {
      "rank": 15,
-     "name": "AFC Wimbledon",
-     "played": 10,
-     "points": 12
+     "name": "Wycombe Wanderers",
+     "played": 11,
+     "points": 14
     },
     {
      "rank": 16,
-     "name": "Luton Town",
-     "played": 9,
-     "points": 11
+     "name": "AFC Wimbledon",
+     "played": 11,
+     "points": 12
     },
     {
      "rank": 17,
-     "name": "Doncaster Rovers",
-     "played": 9,
-     "points": 9
+     "name": "Blackpool",
+     "played": 10,
+     "points": 11
     },
     {
      "rank": 18,
-     "name": "Milton Keynes Dons",
-     "played": 9,
-     "points": 9
+     "name": "Notts County",
+     "played": 10,
+     "points": 10
     },
     {
      "rank": 19,
-     "name": "Peterborough United",
+     "name": "Doncaster Rovers",
      "played": 10,
      "points": 9
     },
     {
      "rank": 20,
-     "name": "Blackpool",
-     "played": 9,
-     "points": 8
+     "name": "Milton Keynes Dons",
+     "played": 10,
+     "points": 9
     },
     {
      "rank": 21,
-     "name": "Barnsley",
-     "played": 9,
-     "points": 8
+     "name": "Peterborough United",
+     "played": 11,
+     "points": 9
     },
     {
      "rank": 22,
-     "name": "Bromley",
-     "played": 9,
+     "name": "Barnsley",
+     "played": 10,
      "points": 8
     },
     {
      "rank": 23,
-     "name": "Notts County",
-     "played": 9,
-     "points": 7
+     "name": "Bromley",
+     "played": 10,
+     "points": 8
     },
     {
      "rank": 24,
      "name": "Wigan Athletic",
-     "played": 9,
+     "played": 10,
      "points": 7
     }
    ]
@@ -454,8 +454,8 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-20T18:53:04.322Z",
-   "changed": "2026-10-17T17:44:43.754Z",
+   "checked": "2026-10-20T23:36:22.424Z",
+   "changed": "2026-10-20T23:36:22.424Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
    "latestMatch": null,
@@ -465,145 +465,145 @@
     {
      "rank": 1,
      "name": "Salford City",
-     "played": 11,
-     "points": 22
+     "played": 12,
+     "points": 25
     },
     {
      "rank": 2,
      "name": "Barnet",
-     "played": 9,
+     "played": 10,
      "points": 21
     },
     {
      "rank": 3,
      "name": "Crewe Alexandra",
-     "played": 11,
+     "played": 12,
      "points": 21
     },
     {
      "rank": 4,
-     "name": "York City",
-     "played": 10,
-     "points": 16
+     "name": "Walsall",
+     "played": 11,
+     "points": 19
     },
     {
      "rank": 5,
-     "name": "Walsall",
-     "played": 10,
-     "points": 16
+     "name": "Cheltenham Town",
+     "played": 12,
+     "points": 18
     },
     {
      "rank": 6,
-     "name": "Gillingham",
+     "name": "York City",
      "played": 11,
-     "points": 16
+     "points": 17
     },
     {
      "rank": 7,
-     "name": "Chesterfield",
-     "played": 11,
-     "points": 15
+     "name": "Gillingham",
+     "played": 12,
+     "points": 17
     },
     {
      "rank": 8,
-     "name": "Cheltenham Town",
-     "played": 11,
-     "points": 15
+     "name": "Shrewsbury Town",
+     "played": 12,
+     "points": 17
     },
     {
      "rank": 9,
-     "name": "Bristol Rovers",
-     "played": 11,
-     "points": 15
+     "name": "Chesterfield",
+     "played": 12,
+     "points": 16
     },
     {
      "rank": 10,
-     "name": "Accrington Stanley",
-     "played": 11,
-     "points": 14
+     "name": "Exeter City",
+     "played": 12,
+     "points": 16
     },
     {
      "rank": 11,
-     "name": "Newport County",
-     "played": 11,
-     "points": 14
+     "name": "Accrington Stanley",
+     "played": 12,
+     "points": 15
     },
     {
      "rank": 12,
-     "name": "Fleetwood Town",
-     "played": 11,
-     "points": 14
+     "name": "Newport County",
+     "played": 12,
+     "points": 15
     },
     {
      "rank": 13,
-     "name": "Rochdale",
-     "played": 11,
-     "points": 14
+     "name": "Tranmere Rovers",
+     "played": 12,
+     "points": 15
     },
     {
      "rank": 14,
-     "name": "Shrewsbury Town",
-     "played": 11,
-     "points": 14
+     "name": "Rochdale",
+     "played": 12,
+     "points": 15
     },
     {
      "rank": 15,
-     "name": "Grimsby Town",
-     "played": 11,
-     "points": 13
+     "name": "Swindon Town",
+     "played": 12,
+     "points": 15
     },
     {
      "rank": 16,
-     "name": "Exeter City",
-     "played": 11,
-     "points": 13
+     "name": "Bristol Rovers",
+     "played": 12,
+     "points": 15
     },
     {
      "rank": 17,
-     "name": "Tranmere Rovers",
-     "played": 11,
-     "points": 12
+     "name": "Grimsby Town",
+     "played": 12,
+     "points": 14
     },
     {
      "rank": 18,
-     "name": "Swindon Town",
+     "name": "Fleetwood Town",
+     "played": 12,
+     "points": 14
+    },
+    {
+     "rank": 19,
+     "name": "Colchester United",
      "played": 11,
      "points": 12
     },
     {
-     "rank": 19,
-     "name": "Oldham Athletic",
-     "played": 10,
-     "points": 11
-    },
-    {
      "rank": 20,
-     "name": "Colchester United",
+     "name": "Port Vale",
      "played": 10,
-     "points": 11
+     "points": 12
     },
     {
      "rank": 21,
-     "name": "Port Vale",
-     "played": 9,
+     "name": "Oldham Athletic",
+     "played": 11,
      "points": 11
     },
     {
      "rank": 22,
-     "name": "Northampton Town",
-     "played": 9,
-     "points": 10
+     "name": "Rotherham United",
+     "played": 12,
+     "points": 11
     },
     {
      "rank": 23,
-     "name": "Rotherham United",
-     "played": 11,
+     "name": "Northampton Town",
+     "played": 10,
      "points": 10
     },
     {
      "rank": 24,
      "name": "Crawley Town",
-     "played": 9,
+     "played": 10,
      "points": 5
     }
    ]
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-20T18:53:04.773Z",
+   "checked": "2026-10-20T23:36:22.883Z",
    "changed": "2026-10-10T21:07:05.098Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,8 +768,8 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-20T18:53:05.272Z",
-   "changed": "2026-10-17T17:44:44.556Z",
+   "checked": "2026-10-20T23:36:23.281Z",
+   "changed": "2026-10-20T23:36:23.281Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
    "latestMatch": null,
@@ -784,14 +784,14 @@
     },
     {
      "rank": 2,
-     "name": "Raith Rovers",
+     "name": "Partick Thistle",
      "played": 11,
-     "points": 21
+     "points": 22
     },
     {
      "rank": 3,
-     "name": "Partick Thistle",
-     "played": 10,
+     "name": "Raith Rovers",
+     "played": 11,
      "points": 21
     },
     {
@@ -802,14 +802,14 @@
     },
     {
      "rank": 5,
-     "name": "Livingston",
-     "played": 11,
-     "points": 14
+     "name": "Dunfermline Athletic",
+     "played": 10,
+     "points": 15
     },
     {
      "rank": 6,
-     "name": "Dunfermline Athletic",
-     "played": 9,
+     "name": "Livingston",
+     "played": 11,
      "points": 14
     },
     {
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-20T18:53:06.043Z",
+   "checked": "2026-10-20T23:36:23.858Z",
    "changed": "2026-10-17T20:03:16.831Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-20T18:53:06.682Z",
+   "checked": "2026-10-20T23:36:24.423Z",
    "changed": "2026-10-17T17:44:45.727Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
