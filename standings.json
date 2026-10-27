@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T15:06:10.160Z",
+ "updated": "2026-10-27T21:47:23.982Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-27T15:06:06.168Z",
+   "checked": "2026-10-27T21:47:20.533Z",
    "changed": "2026-10-25T20:20:43.213Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-27T15:06:06.607Z",
+   "checked": "2026-10-27T21:47:20.900Z",
    "changed": "2026-10-24T20:09:33.653Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,8 +297,8 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-27T15:06:07.055Z",
-   "changed": "2026-10-24T20:09:34.108Z",
+   "checked": "2026-10-27T21:47:21.269Z",
+   "changed": "2026-10-27T21:47:21.270Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
@@ -314,103 +314,103 @@
     {
      "rank": 2,
      "name": "Stockport County",
-     "played": 12,
+     "played": 13,
      "points": 23
     },
     {
      "rank": 3,
+     "name": "Oxford United",
+     "played": 11,
+     "points": 22
+    },
+    {
+     "rank": 4,
      "name": "Bradford City",
      "played": 12,
      "points": 22
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Plymouth Argyle",
      "played": 13,
      "points": 22
     },
     {
-     "rank": 5,
+     "rank": 6,
      "name": "Reading",
      "played": 12,
      "points": 21
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Cambridge United",
+     "played": 13,
+     "points": 21
+    },
+    {
+     "rank": 8,
+     "name": "Luton Town",
      "played": 12,
      "points": 20
     },
     {
-     "rank": 7,
-     "name": "Oxford United",
-     "played": 10,
+     "rank": 9,
+     "name": "Sheffield Wednesday",
+     "played": 12,
      "points": 19
     },
     {
-     "rank": 8,
-     "name": "Sheffield Wednesday",
-     "played": 11,
-     "points": 18
-    },
-    {
-     "rank": 9,
+     "rank": 10,
      "name": "Mansfield Town",
      "played": 11,
      "points": 18
     },
     {
-     "rank": 10,
-     "name": "Luton Town",
-     "played": 11,
-     "points": 17
+     "rank": 11,
+     "name": "Leicester City",
+     "played": 12,
+     "points": 18
     },
     {
-     "rank": 11,
+     "rank": 12,
      "name": "Burton Albion",
      "played": 13,
      "points": 17
     },
     {
-     "rank": 12,
+     "rank": 13,
      "name": "Stevenage",
      "played": 11,
      "points": 15
     },
     {
-     "rank": 13,
-     "name": "Leicester City",
-     "played": 11,
-     "points": 15
-    },
-    {
      "rank": 14,
-     "name": "Wycombe Wanderers",
+     "name": "Milton Keynes Dons",
      "played": 12,
      "points": 15
     },
     {
      "rank": 15,
+     "name": "Wycombe Wanderers",
+     "played": 12,
+     "points": 15
+    },
+    {
+     "rank": 16,
      "name": "Leyton Orient",
      "played": 12,
      "points": 14
     },
     {
-     "rank": 16,
+     "rank": 17,
      "name": "AFC Wimbledon",
      "played": 12,
      "points": 13
     },
     {
-     "rank": 17,
-     "name": "Doncaster Rovers",
-     "played": 11,
-     "points": 12
-    },
-    {
      "rank": 18,
-     "name": "Milton Keynes Dons",
-     "played": 11,
+     "name": "Doncaster Rovers",
+     "played": 12,
      "points": 12
     },
     {
@@ -434,7 +434,7 @@
     {
      "rank": 22,
      "name": "Bromley",
-     "played": 11,
+     "played": 12,
      "points": 9
     },
     {
@@ -446,7 +446,7 @@
     {
      "rank": 24,
      "name": "Wigan Athletic",
-     "played": 11,
+     "played": 12,
      "points": 7
     }
    ]
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-27T15:06:07.463Z",
+   "checked": "2026-10-27T21:47:21.648Z",
    "changed": "2026-10-27T00:13:17.478Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-27T15:06:07.878Z",
+   "checked": "2026-10-27T21:47:22.028Z",
    "changed": "2026-10-24T20:09:34.971Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-27T15:06:08.339Z",
+   "checked": "2026-10-27T21:47:22.421Z",
    "changed": "2026-10-24T20:09:35.356Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,27 +841,27 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-27T15:06:09.091Z",
-   "changed": "2026-10-25T15:30:23.708Z",
+   "checked": "2026-10-27T21:47:23.112Z",
+   "changed": "2026-10-27T21:47:23.112Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
    "latestMatch": null,
    "lastFixture": null,
-   "sourceUpdated": "27/10/2026 14:35",
+   "sourceUpdated": "27/10/2026 21:35",
    "teams": [
     {
      "rank": 1,
      "name": "Ross County",
-     "played": 11,
+     "played": 12,
      "gd": 36,
-     "points": 31
+     "points": 32
     },
     {
      "rank": 2,
      "name": "Hamilton Academical",
-     "played": 11,
+     "played": 12,
      "gd": 21,
-     "points": 31
+     "points": 32
     },
     {
      "rank": 3,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-27T15:06:09.793Z",
+   "checked": "2026-10-27T21:47:23.651Z",
    "changed": "2026-10-17T17:44:45.727Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
