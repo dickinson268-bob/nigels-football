@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T20:03:19.190Z",
+ "updated": "2026-10-29T00:35:08.954Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-28T20:03:15.444Z",
+   "checked": "2026-10-29T00:35:05.113Z",
    "changed": "2026-10-25T20:20:43.213Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-28T20:03:15.878Z",
+   "checked": "2026-10-29T00:35:05.511Z",
    "changed": "2026-10-24T20:09:33.653Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-28T20:03:16.290Z",
+   "checked": "2026-10-29T00:35:05.921Z",
    "changed": "2026-10-27T21:47:21.270Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-28T20:03:16.701Z",
+   "checked": "2026-10-29T00:35:06.329Z",
    "changed": "2026-10-28T03:52:19.650Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,8 +611,8 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-28T20:03:17.176Z",
-   "changed": "2026-10-28T03:52:20.040Z",
+   "checked": "2026-10-29T00:35:06.834Z",
+   "changed": "2026-10-29T00:35:06.834Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
@@ -628,7 +628,7 @@
     {
      "rank": 2,
      "name": "Harrogate Town",
-     "played": 14,
+     "played": 15,
      "points": 31
     },
     {
@@ -669,33 +669,33 @@
     },
     {
      "rank": 9,
+     "name": "Carlisle United",
+     "played": 15,
+     "points": 23
+    },
+    {
+     "rank": 10,
      "name": "FC Halifax Town",
      "played": 15,
      "points": 21
     },
     {
-     "rank": 10,
+     "rank": 11,
      "name": "Kidderminster Harriers",
      "played": 15,
      "points": 21
     },
     {
-     "rank": 11,
-     "name": "AFC Hornchurch",
+     "rank": 12,
+     "name": "Sutton United",
      "played": 15,
      "points": 21
     },
     {
-     "rank": 12,
-     "name": "Carlisle United",
-     "played": 14,
-     "points": 20
-    },
-    {
      "rank": 13,
-     "name": "Aldershot Town",
-     "played": 14,
-     "points": 18
+     "name": "AFC Hornchurch",
+     "played": 15,
+     "points": 21
     },
     {
      "rank": 14,
@@ -705,27 +705,27 @@
     },
     {
      "rank": 15,
-     "name": "Eastleigh",
-     "played": 14,
+     "name": "Forest Green Rovers",
+     "played": 13,
      "points": 18
     },
     {
      "rank": 16,
-     "name": "Sutton United",
-     "played": 14,
+     "name": "Aldershot Town",
+     "played": 15,
      "points": 18
     },
     {
      "rank": 17,
-     "name": "Tamworth",
-     "played": 14,
-     "points": 17
+     "name": "Eastleigh",
+     "played": 15,
+     "points": 18
     },
     {
      "rank": 18,
-     "name": "Forest Green Rovers",
-     "played": 12,
-     "points": 15
+     "name": "Tamworth",
+     "played": 14,
+     "points": 17
     },
     {
      "rank": 19,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-28T20:03:17.574Z",
+   "checked": "2026-10-29T00:35:07.387Z",
    "changed": "2026-10-28T03:52:20.411Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-28T20:03:18.228Z",
+   "checked": "2026-10-29T00:35:08.002Z",
    "changed": "2026-10-27T21:47:23.112Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-28T20:03:18.844Z",
+   "checked": "2026-10-29T00:35:08.604Z",
    "changed": "2026-10-17T17:44:45.727Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
