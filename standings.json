@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T00:20:32.613Z",
+ "updated": "2026-10-31T09:15:00.748Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-10-31T00:20:28.461Z",
+   "checked": "2026-10-31T09:14:57.272Z",
    "changed": "2026-10-25T20:20:43.213Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-10-31T00:20:28.902Z",
+   "checked": "2026-10-31T09:14:57.646Z",
    "changed": "2026-10-31T00:20:28.902Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-10-31T00:20:29.360Z",
+   "checked": "2026-10-31T09:14:58.030Z",
    "changed": "2026-10-27T21:47:21.270Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-10-31T00:20:29.791Z",
+   "checked": "2026-10-31T09:14:58.425Z",
    "changed": "2026-10-31T00:20:29.791Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-10-31T00:20:30.257Z",
+   "checked": "2026-10-31T09:14:58.815Z",
    "changed": "2026-10-31T00:20:30.257Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-10-31T00:20:30.714Z",
+   "checked": "2026-10-31T09:14:59.208Z",
    "changed": "2026-10-31T00:20:30.714Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-10-31T00:20:31.464Z",
+   "checked": "2026-10-31T09:14:59.833Z",
    "changed": "2026-10-27T21:47:23.112Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-10-31T00:20:32.169Z",
+   "checked": "2026-10-31T09:15:00.402Z",
    "changed": "2026-10-17T17:44:45.727Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
