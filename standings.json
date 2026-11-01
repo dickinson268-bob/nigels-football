@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T12:38:10.391Z",
+ "updated": "2026-11-01T19:20:44.905Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,8 +7,8 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-11-01T12:38:04.620Z",
-   "changed": "2026-10-31T23:57:31.401Z",
+   "checked": "2026-11-01T19:20:40.858Z",
+   "changed": "2026-11-01T19:20:40.858Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
@@ -17,14 +17,14 @@
    "teams": [
     {
      "rank": 1,
-     "name": "Manchester City",
+     "name": "Arsenal",
      "played": 9,
-     "points": 21
+     "points": 24
     },
     {
      "rank": 2,
-     "name": "Arsenal",
-     "played": 8,
+     "name": "Manchester City",
+     "played": 9,
      "points": 21
     },
     {
@@ -42,7 +42,7 @@
     {
      "rank": 5,
      "name": "Liverpool",
-     "played": 8,
+     "played": 9,
      "points": 15
     },
     {
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-11-01T12:38:05.061Z",
+   "checked": "2026-11-01T19:20:41.280Z",
    "changed": "2026-10-31T20:56:41.142Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,8 +297,8 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-11-01T12:38:05.479Z",
-   "changed": "2026-10-31T20:56:41.579Z",
+   "checked": "2026-11-01T19:20:41.716Z",
+   "changed": "2026-11-01T19:20:41.716Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
@@ -356,8 +356,8 @@
     {
      "rank": 9,
      "name": "Sheffield Wednesday",
-     "played": 12,
-     "points": 19
+     "played": 13,
+     "points": 20
     },
     {
      "rank": 10,
@@ -415,15 +415,15 @@
     },
     {
      "rank": 19,
-     "name": "Doncaster Rovers",
-     "played": 13,
+     "name": "Blackpool",
+     "played": 12,
      "points": 12
     },
     {
      "rank": 20,
-     "name": "Blackpool",
-     "played": 11,
-     "points": 11
+     "name": "Doncaster Rovers",
+     "played": 13,
+     "points": 12
     },
     {
      "rank": 21,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-11-01T12:38:05.947Z",
+   "checked": "2026-11-01T19:20:42.140Z",
    "changed": "2026-10-31T20:56:42.076Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-11-01T12:38:06.365Z",
+   "checked": "2026-11-01T19:20:42.554Z",
    "changed": "2026-10-31T20:56:42.494Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,7 +768,7 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-11-01T12:38:08.560Z",
+   "checked": "2026-11-01T19:20:42.953Z",
    "changed": "2026-10-31T20:56:42.974Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-11-01T12:38:09.319Z",
+   "checked": "2026-11-01T19:20:43.934Z",
    "changed": "2026-10-31T16:46:11.317Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-11-01T12:38:10.030Z",
+   "checked": "2026-11-01T19:20:44.558Z",
    "changed": "2026-10-31T20:56:44.174Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
