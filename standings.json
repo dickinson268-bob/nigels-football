@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T18:51:11.713Z",
+ "updated": "2026-11-07T00:35:59.170Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,8 +7,8 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-11-06T18:51:07.690Z",
-   "changed": "2026-11-03T05:13:59.037Z",
+   "checked": "2026-11-07T00:35:54.454Z",
+   "changed": "2026-11-07T00:35:54.454Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
    "latestMatch": null,
@@ -41,21 +41,21 @@
     },
     {
      "rank": 5,
+     "name": "Everton",
+     "played": 10,
+     "points": 16
+    },
+    {
+     "rank": 6,
      "name": "Liverpool",
      "played": 9,
      "points": 15
     },
     {
-     "rank": 6,
+     "rank": 7,
      "name": "Brentford",
      "played": 9,
      "points": 14
-    },
-    {
-     "rank": 7,
-     "name": "Everton",
-     "played": 9,
-     "points": 13
     },
     {
      "rank": 8,
@@ -108,7 +108,7 @@
     {
      "rank": 16,
      "name": "Coventry City",
-     "played": 9,
+     "played": 10,
      "points": 9
     },
     {
@@ -140,8 +140,8 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-11-06T18:51:08.141Z",
-   "changed": "2026-11-05T01:16:36.129Z",
+   "checked": "2026-11-07T00:35:55.098Z",
+   "changed": "2026-11-07T00:35:55.098Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
    "latestMatch": null,
@@ -247,7 +247,7 @@
     {
      "rank": 17,
      "name": "Bolton Wanderers",
-     "played": 14,
+     "played": 15,
      "points": 17
     },
     {
@@ -283,8 +283,8 @@
     {
      "rank": 23,
      "name": "Derby County",
-     "played": 14,
-     "points": 7
+     "played": 15,
+     "points": 10
     },
     {
      "rank": 24,
@@ -297,7 +297,7 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-11-06T18:51:08.549Z",
+   "checked": "2026-11-07T00:35:55.695Z",
    "changed": "2026-11-05T01:16:36.562Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-11-06T18:51:08.966Z",
+   "checked": "2026-11-07T00:35:56.234Z",
    "changed": "2026-11-04T01:01:23.014Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,7 +611,7 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-11-06T18:51:09.444Z",
+   "checked": "2026-11-07T00:35:56.740Z",
    "changed": "2026-10-31T20:56:42.494Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
@@ -768,8 +768,8 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-11-06T18:51:09.928Z",
-   "changed": "2026-10-31T20:56:42.974Z",
+   "checked": "2026-11-07T00:35:57.174Z",
+   "changed": "2026-11-07T00:35:57.174Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
    "latestMatch": null,
@@ -778,21 +778,21 @@
    "teams": [
     {
      "rank": 1,
+     "name": "Raith Rovers",
+     "played": 14,
+     "points": 25
+    },
+    {
+     "rank": 2,
      "name": "Partick Thistle",
      "played": 13,
      "points": 25
     },
     {
-     "rank": 2,
-     "name": "Raith Rovers",
-     "played": 13,
-     "points": 24
-    },
-    {
      "rank": 3,
      "name": "Dunfermline Athletic",
-     "played": 13,
-     "points": 24
+     "played": 14,
+     "points": 25
     },
     {
      "rank": 4,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-11-06T18:51:10.710Z",
+   "checked": "2026-11-07T00:35:58.255Z",
    "changed": "2026-10-31T16:46:11.317Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-11-06T18:51:11.335Z",
+   "checked": "2026-11-07T00:35:58.824Z",
    "changed": "2026-10-31T20:56:44.174Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
