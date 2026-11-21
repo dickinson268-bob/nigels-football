@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T19:35:15.893Z",
+ "updated": "2026-11-21T01:57:15.255Z",
  "source": "mixed",
  "season": 2026,
  "failed": [],
@@ -7,7 +7,7 @@
   "eng_premier": {
    "name": "England Premier League",
    "source": "espn",
-   "checked": "2026-11-20T19:35:12.007Z",
+   "checked": "2026-11-21T01:57:11.384Z",
    "changed": "2026-11-08T19:18:55.995Z",
    "watchingSince": "2026-08-21T08:52:26.895Z",
    "lastModified": null,
@@ -140,7 +140,7 @@
   "eng_championship": {
    "name": "England Championship",
    "source": "espn",
-   "checked": "2026-11-20T19:35:12.461Z",
+   "checked": "2026-11-21T01:57:11.832Z",
    "changed": "2026-11-07T17:22:56.388Z",
    "watchingSince": "2026-08-21T08:52:27.286Z",
    "lastModified": null,
@@ -297,8 +297,8 @@
   "eng_league_one": {
    "name": "England League One",
    "source": "espn",
-   "checked": "2026-11-20T19:35:12.878Z",
-   "changed": "2026-11-14T19:40:43.432Z",
+   "checked": "2026-11-21T01:57:12.276Z",
+   "changed": "2026-11-21T01:57:12.276Z",
    "watchingSince": "2026-08-21T08:52:28.014Z",
    "lastModified": null,
    "latestMatch": null,
@@ -319,21 +319,21 @@
     },
     {
      "rank": 3,
+     "name": "Sheffield Wednesday",
+     "played": 15,
+     "points": 26
+    },
+    {
+     "rank": 4,
      "name": "Oxford United",
      "played": 13,
      "points": 26
     },
     {
-     "rank": 4,
+     "rank": 5,
      "name": "Luton Town",
      "played": 14,
      "points": 24
-    },
-    {
-     "rank": 5,
-     "name": "Sheffield Wednesday",
-     "played": 14,
-     "points": 23
     },
     {
      "rank": 6,
@@ -440,7 +440,7 @@
     {
      "rank": 23,
      "name": "Barnsley",
-     "played": 13,
+     "played": 14,
      "points": 9
     },
     {
@@ -454,7 +454,7 @@
   "eng_league_two": {
    "name": "England League Two",
    "source": "espn",
-   "checked": "2026-11-20T19:35:13.289Z",
+   "checked": "2026-11-21T01:57:12.742Z",
    "changed": "2026-11-14T19:40:43.912Z",
    "watchingSince": "2026-08-21T08:52:28.398Z",
    "lastModified": null,
@@ -611,8 +611,8 @@
   "eng_national": {
    "name": "England National League",
    "source": "espn",
-   "checked": "2026-11-20T19:35:13.735Z",
-   "changed": "2026-11-14T19:40:44.417Z",
+   "checked": "2026-11-21T01:57:13.157Z",
+   "changed": "2026-11-21T01:57:13.157Z",
    "watchingSince": "2026-08-21T08:52:28.932Z",
    "lastModified": null,
    "latestMatch": null,
@@ -622,8 +622,8 @@
     {
      "rank": 1,
      "name": "Boreham Wood",
-     "played": 17,
-     "points": 45
+     "played": 18,
+     "points": 48
     },
     {
      "rank": 2,
@@ -634,7 +634,7 @@
     {
      "rank": 3,
      "name": "Southend United",
-     "played": 17,
+     "played": 18,
      "points": 32
     },
     {
@@ -768,8 +768,8 @@
   "sco_championship": {
    "name": "Scotland Championship",
    "source": "espn",
-   "checked": "2026-11-20T19:35:14.155Z",
-   "changed": "2026-11-14T19:40:44.904Z",
+   "checked": "2026-11-21T01:57:13.579Z",
+   "changed": "2026-11-21T01:57:13.579Z",
    "watchingSince": "2026-08-21T08:52:29.373Z",
    "lastModified": null,
    "latestMatch": null,
@@ -809,14 +809,14 @@
     {
      "rank": 6,
      "name": "Inverness Caledonian Thistle",
-     "played": 15,
-     "points": 20
+     "played": 16,
+     "points": 21
     },
     {
      "rank": 7,
      "name": "Ayr United",
-     "played": 14,
-     "points": 18
+     "played": 15,
+     "points": 19
     },
     {
      "rank": 8,
@@ -841,7 +841,7 @@
   "sco_league_one": {
    "name": "Scotland League One",
    "source": "spfl",
-   "checked": "2026-11-20T19:35:14.903Z",
+   "checked": "2026-11-21T01:57:14.248Z",
    "changed": "2026-11-14T19:40:45.607Z",
    "watchingSince": "2026-08-21T08:52:30.526Z",
    "lastModified": null,
@@ -924,7 +924,7 @@
   "sco_league_two": {
    "name": "Scotland League Two",
    "source": "spfl",
-   "checked": "2026-11-20T19:35:15.523Z",
+   "checked": "2026-11-21T01:57:14.883Z",
    "changed": "2026-11-14T19:40:46.298Z",
    "watchingSince": "2026-08-21T08:52:31.138Z",
    "lastModified": null,
